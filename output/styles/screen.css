@@ -54,6 +54,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+@font-face {
+  font-family: "BanksiaBold";
+  src: url('/output/styles/fonts/../fonts/banksb20-webfont.eot') format('opentype'), url('/output/styles/fonts/../fonts/banksb20-webfont.woff') format('woff'), url('/output/styles/fonts/../fonts/banksb20-webfont.ttf') format('truetype'), url('/output/styles/fonts/../fonts/banksb20-webfont.svg#BanksiaBold') format('svg');
+}
+
+@font-face {
+  font-family: "BanksiaRegular";
+  src: url('/output/styles/fonts/../fonts/banksb-webfont.eot') format('opentype'), url('/output/styles/fonts/../fonts/banksb-webfont.woff') format('woff'), url('/output/styles/fonts/../fonts/banksb-webfont.ttf') format('truetype'), url('/output/styles/fonts/../fonts/banksb-webfont.svg#BanksiaRegular') format('svg');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +74,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-  background: #1b2949;
+  color: #223344;
+  margin: 0;
+  padding: 0;
+  background-color: #aac8e0;
+  background-image: url("/images/shade.jpg");
+  background-repeat: repeat-x;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
@@ -77,25 +92,34 @@ a {
   color: white;
 }
 a:visited {
-  color: #b12319;
+  color: #1b2949;
 }
 a:hover {
-  color: #b12319;
+  color: #1b2949;
 }
 a:active {
-  color: #b12319;
+  color: #1b2949;
+}
+
+h1, h2, h3, h4 {
+  font-family: "BanksiaRegular";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .clear {
   clear: both;
 }
 
+#header {
+  margin: 100px 0 0 0;
+  text-align: center;
+}
+
 #container {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  margin: 0;
+  border: 1px solid red;
+  width: 1000px;
+  margin: 270px auto 0 auto;
   padding: 0;
-  background-color: #1b2949;
+  background-color: transparent;
 }

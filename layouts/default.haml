@@ -12,11 +12,15 @@
   %head
     %meta{:charset =>"utf-8"}
     %title William Youmans | Web Developer, World Traveler
-    %link{:rel => "shortcut icon", :href => "images/favicon.ico"}
-    %link{:rel => "stylesheet", :type =>"text/css", :href => "styles/screen.css#{$random}", :media =>"screen"}
-    %link{:rel => "stylesheet", :type =>"text/css", :href => "styles/fancybox.css#{$random}", :media =>"screen"}
-    %script{:src => "scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "scripts/functions.js#{$random}", :type => "text/javascript", :charset => "utf-8"}
+    %link{:rel => "shortcut icon", :href => "/images/favicon.ico"}
+    %link{:rel => "stylesheet", :type =>"text/css", :href => "/styles/screen.css#{$random}", :media =>"screen"}
+    %link{:rel => "stylesheet", :type =>"text/css", :href => "/styles/fancybox.css#{$random}", :media =>"screen"}
+    %script{:src => "/scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/response.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/functions.js#{$random}", :type => "text/javascript", :charset => "utf-8"}
   %body
+    #header
+      %img{:src => "/images/white_tea.png", :title => "William Youmans", :alt => "William Youmans", :id => "main_logo"}
+
     #container
       = yield

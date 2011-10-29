@@ -1,9 +1,13 @@
+@import compass/css3
 @import compass/reset
 @import compass/typography/links/link-colors
 
 $red: #B12319
 $blue: #1B2949
 $white: #FFF
+
++font-face("BanksiaBold", font-files("../fonts/banksb20-webfont.eot", opentype, "../fonts/banksb20-webfont.woff", woff, "../fonts/banksb20-webfont.ttf", truetype, "../fonts/banksb20-webfont.svg#BanksiaBold", svg))
++font-face("BanksiaRegular", font-files("../fonts/banksb-webfont.eot", opentype, "../fonts/banksb-webfont.woff", woff, "../fonts/banksb-webfont.ttf", truetype, "../fonts/banksb-webfont.svg#BanksiaRegular", svg))
 
 *
   margin: 0
@@ -13,7 +17,13 @@ $white: #FFF
   outline: 0
 
 body
-  background: $blue
+  color: #223344
+  margin: 0
+  padding: 0
+  background:
+    color: #AAC8E0
+    image: url('/images/shade.jpg')
+    repeat: repeat-x
   font:
     family: Helvetica, Arial, sans-serif
     size: 14px
@@ -23,17 +33,25 @@ a
     decoration: none
 
 a
-  +link-colors($white, $red, $red, $red)
+  +link-colors($white, $blue, $blue, $blue)
+
+h1, h2, h3, h4
+  font:
+    family: "BanksiaRegular"
+    weight: normal
+    style: normal
 
 .clear
   clear: both
 
+#header
+  margin: 100px 0 0 0
+  text-align: center
+
 #container
-  top: 0
-  left: 0
-  position: absolute
-  width: 100%
-  margin: 0
+  border: 1px solid red
+  width: 1000px
+  margin: 270px auto 0 auto
   padding: 0
   background:
-    color: $blue
+    color: transparent
