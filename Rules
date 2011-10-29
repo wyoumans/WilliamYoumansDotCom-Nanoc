@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 
+# Compass requirements
+require 'compass'
+Compass.add_project_configuration('config.rb')
+
 # A few helpful tips about the Rules file:
-#
-# * The string given to #compile and #route are matching patterns for
-#   identifiers--not for paths. Therefore, you can’t match on extension.
 #
 # * The order of rules is important: for each item, only the first matching
 #   rule is applied.
@@ -13,31 +14,36 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+# filters
+compile '/styles/*' do
+  filter :sass, Compass.sass_engine_options
+end
+
+compile "/scripts/*" do
+  # Do Nothing!
+end
+
+compile "/images/*" do
+  # Do Nothing!
 end
 
 compile '*' do
-  if item.binary?
-    # don’t filter binary items
-  else
-    filter :erb
-    layout 'default'
-  end
+  filter :haml
+  layout 'default'
 end
 
-route '/stylesheet/' do
-  '/style.css'
+# routes
+route '/styles/*' do
+  item.identifier.chop + '.css'
 end
-
+route '/scripts/*' do
+  item.identifier.chop + '.js'
+end
+route '/images/*' do
+  item.identifier.chop + '.' + item[:extension]
+end
 route '*' do
-  if item.binary?
-    # Write item with identifier /foo/ to /foo.ext
-    item.identifier.chop + '.' + item[:extension]
-  else
-    # Write item with identifier /foo/ to /foo/index.html
-    item.identifier + 'index.html'
-  end
+  item.identifier + 'index.html'
 end
 
-layout '*', :erb
+layout '*', :haml, :format => :html5

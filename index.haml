@@ -1,0 +1,19 @@
+#main
+  #slideshow
+    - (1..7).each do |i|
+      .slide{:style => "background-image: url(images/pages/#{i}.jpg#{$random});"}
+
+#legal_wrapper
+  #legal
+    #legal_slideshow
+      - (1..15).each do |i|
+        .legal_slide{:style => "background-image: url(images/legal/#{i}.jpg#{$random});"}
+    #bottom
+      #legal_previous{:style => "background-image: url(images/legal/previous.jpg);", :class => "legal_icon"}
+      #legal_next{:style => "background-image: url(images/legal/next.jpg);", :class => "legal_icon"}
+      #legal_counter
+        %span
+          1
+        &nbsp;of&nbsp;15
+      #legal_close{:style => "background-image: url(images/legal/close.jpg);", :class => "legal_icon"}
+      .clear
