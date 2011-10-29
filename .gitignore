@@ -1,0 +1,20 @@
+#mac ignores
+:2e*
+._*
+*~
+.AppleDouble*
+.DS_*
+-.save
+.com.apple.timemachine*
+
+#IDE ignores
+*.komodoproject
+.komodotools
+*.esproj
+
+# Nanoc ignores
+tmp/
+.sass-cache
+.sass-cache/*
+.output/*
+NERD_tree_3
