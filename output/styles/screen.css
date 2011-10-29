@@ -1,0 +1,274 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:active, *:focus {
+  outline: 0;
+}
+
+body {
+  background: #1b2949;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+a:visited {
+  color: #b12319;
+}
+a:hover {
+  color: #b12319;
+}
+a:active {
+  color: #b12319;
+}
+
+.clear {
+  clear: both;
+}
+
+#container {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1b2949;
+}
+#container #main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+#container #main #slideshow .slide {
+  z-index: 1;
+  width: 1280px;
+  height: 768px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+#container #main #leftClickPad, #container #main #rightClickPad {
+  z-index: 10;
+  border: 1px solid #b12319;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+#container #main #leftClickPad {
+  left: 0;
+}
+#container #main #rightClickPad {
+  right: 0;
+}
+#container #main #slideshow {
+  cursor: pointer;
+}
+#container #header {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1b2949;
+  background-image: url(../images/footer/footer_background.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  color: white;
+  text-align: center;
+  overflow: none;
+  height: 74px;
+  z-index: 100;
+  border-top: 4px solid #b12319;
+}
+#container #header a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+#container #header #home_link {
+  background-image: url(../images/footer/home.png);
+}
+#container #header #menu_link {
+  background-image: url(../images/footer/menu.png);
+}
+#container #header #previous_link {
+  background-image: url(../images/footer/previous.png);
+}
+#container #header #next_link {
+  background-image: url(../images/footer/next.png);
+}
+#container #header #legal_link {
+  background-image: url(../images/footer/legal.png);
+}
+#container #header #legal_link:hover, #container #header #legal_link:active {
+  background-image: url(../images/footer/legal_active.png);
+}
+#container #header #page6_link {
+  background-image: url(../images/footer/page6.png);
+}
+#container #header #page6_link:hover, #container #header #page6_link:active {
+  background-color: transparent;
+  background-image: url(../images/footer/page6_active.png);
+}
+#container #menu {
+  display: none;
+  z-index: 100;
+  background-color: #001a49;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  font-size: 18px;
+  box-shadow: 2px 2px 6px #222222;
+}
+#container #menu #title {
+  background-color: transparent;
+  background-image: url(../images/menu/toc_top.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+#container #menu .menu_item {
+  position: relative;
+  height: 70px;
+  width: 300px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+#container #menu .menu_item:hover {
+  cursor: pointer;
+}
+
+#legal_wrapper {
+  display: none;
+}
+
+#legal {
+  width: 100px;
+  height: 100px;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+#legal #legal_slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#legal #legal_slideshow .legal_slide {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+#legal #bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 500px;
+  background-color: black;
+}
+#legal #bottom #legal_previous, #legal #bottom #legal_next {
+  float: left;
+}
+#legal #bottom #legal_close {
+  float: right;
+}
+#legal #bottom #legal_close, #legal #bottom #legal_previous, #legal #bottom #legal_next {
+  cursor: pointer;
+}
+#legal #bottom #legal_counter {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  float: left;
+  width: 100px;
+}
+#legal #bottom .legal_icon {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0 0;
+}
