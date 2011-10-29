@@ -11,28 +11,12 @@
 %html{:lang =>"en"}
   %head
     %meta{:charset =>"utf-8"}
-    %title Amgen Presentation
+    %title William Youmans | Web Developer, World Traveler
     %link{:rel => "shortcut icon", :href => "images/favicon.ico"}
     %link{:rel => "stylesheet", :type =>"text/css", :href => "styles/screen.css#{$random}", :media =>"screen"}
     %link{:rel => "stylesheet", :type =>"text/css", :href => "styles/fancybox.css#{$random}", :media =>"screen"}
     %script{:src => "scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "scripts/jqueryui.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "scripts/easing.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "scripts/fancybox.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "scripts/cycle.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "scripts/functions.js#{$random}", :type => "text/javascript", :charset => "utf-8"}
   %body
     #container
       = yield
-      #menu
-        #title
-        - (0..6).each do |i|
-          %div{:href => "#", :data => {:id => i}, :style => "background-image: url(images/menu/#{i + 1}.jpg)", :id => "menu#{i + 1}_link", :class => "menu_item"}
-      #header
-        %a{:href => '#', :id => "home_link", :class => "icon"}
-        %a{:href => '#', :id => "menu_link", :class => "icon"}
-        %a{:href => '#', :id => "previous_link", :class => "icon"}
-        %a{:href => '#', :id => "next_link", :class => "icon"}
-        %a{:href => "#legal", :id => "legal_link"}
-        %a{:href => "#", :id => "page6_link"}
-        .clear
