@@ -196,7 +196,6 @@ body.index h1 {
 }
 body.index ul.tools li {
   overflow: hidden;
-  line-height: 50px;
   height: 50px;
   margin: 15px;
   float: left;
