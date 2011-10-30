@@ -3,8 +3,11 @@
 @import compass/typography/links/link-colors
 
 $dark_blue: #223344
+$grey: rgba(150, 170, 190, 1)
 $light_blue: #AAC8E0
+$orange: #C60
 $white: #FFF
+$transparent: rgba(0,0,0,0)
 
 *
   margin: 0
@@ -31,7 +34,7 @@ a
     decoration: none
 
 a
-  +link-colors($light_blue, $light_blue, $dark_blue, $dark_blue)
+  +link-colors($dark_blue, $dark_blue, $orange, $orange)
 
 h1, h2, h3, h4
   font:
@@ -66,7 +69,7 @@ h3
     margin: 150px 0 0 0
     text-align: center
     position: relative
-    height: 169px
+    height: 173px
 
     nav
       text-align: left
@@ -90,13 +93,11 @@ h3
             display: block
             padding: 15px 0
             width: 100px
-
-          a:hover
-            background:
-              color: $dark_blue
+            color: $dark_blue
 
   footer
     text-alight: right
+    margin: 0 0 20px 0
 
   #content
     padding: 20px 0 40px 0
@@ -111,3 +112,16 @@ h3
 
     .three.last
       margin-right: 0
+
+body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover
+  color: $dark_blue
+  background:
+    image: linear-gradient(bottom, $grey 2%, $transparent 100%)
+    image: -o-linear-gradient(bottom, $grey 2%, $transparent 100%)
+    image: -moz-linear-gradient(bottom, $grey 2%, $transparent 100%)
+    image: -webkit-linear-gradient(bottom, $grey 2%, $transparent 100%)
+    image: -ms-linear-gradient(bottom, $grey 2%, $transparent 100%)
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  -khtml-border-radius: 5px

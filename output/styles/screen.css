@@ -80,16 +80,16 @@ a {
 }
 
 a {
-  color: #aac8e0;
+  color: #223344;
 }
 a:visited {
-  color: #223344;
+  color: #cc6600;
 }
 a:hover {
-  color: #aac8e0;
+  color: #223344;
 }
 a:active {
-  color: #223344;
+  color: #cc6600;
 }
 
 h1, h2, h3, h4 {
@@ -125,7 +125,7 @@ h3 {
   margin: 150px 0 0 0;
   text-align: center;
   position: relative;
-  height: 169px;
+  height: 173px;
 }
 #container header nav {
   text-align: left;
@@ -149,12 +149,11 @@ h3 {
   display: block;
   padding: 15px 0;
   width: 100px;
-}
-#container header nav ul li a:hover {
-  background-color: #223344;
+  color: #223344;
 }
 #container footer {
   text-alight: right;
+  margin: 0 0 20px 0;
 }
 #container #content {
   padding: 20px 0 40px 0;
@@ -169,4 +168,17 @@ h3 {
 }
 #container #content .three.last {
   margin-right: 0;
+}
+
+body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover {
+  color: #223344;
+  background-image: linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
+  background-image: -ms-linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
 }
