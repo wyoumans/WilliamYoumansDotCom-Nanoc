@@ -26,10 +26,10 @@ body
   padding: 0
   background:
     color: $light_blue
-    image: url('/images/shade.jpg')
+    image: url('/images/template/shade.jpg')
     repeat: repeat-x
   font:
-    family: 'TheanoOldStyle', Helvetica, Arial, sans-serif
+    family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
     size: 14px
   line-height: 18px
 
@@ -126,6 +126,17 @@ h3
 body.index
   h1
     text-align: center
+
+  ul.tools
+    li
+      overflow: hidden
+      line-height: 50px
+      height: 50px
+      margin: 15px
+      float: left
+
+    img
+      width: 50px
 
 body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover
   color: $dark_blue

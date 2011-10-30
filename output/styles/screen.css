@@ -83,9 +83,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #aac8e0;
-  background-image: url("/images/shade.jpg");
+  background-image: url("/images/template/shade.jpg");
   background-repeat: repeat-x;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
@@ -193,6 +193,16 @@ h3 {
 
 body.index h1 {
   text-align: center;
+}
+body.index ul.tools li {
+  overflow: hidden;
+  line-height: 50px;
+  height: 50px;
+  margin: 15px;
+  float: left;
+}
+body.index ul.tools img {
+  width: 50px;
 }
 
 body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover {
