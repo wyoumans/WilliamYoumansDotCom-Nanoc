@@ -129,6 +129,12 @@ h3 {
   color: #cc6600;
 }
 
+h3.second {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #96aabe;
+}
+
 .clear {
   clear: both;
 }
@@ -170,10 +176,14 @@ h3 {
   color: #223344;
 }
 #container footer {
-  text-align: right;
   margin: 10px 0 20px 0;
   padding: 10px 0;
   border-top: 1px dashed #96aabe;
+}
+#container footer #copyright {
+  text-align: right;
+  width: 300px;
+  float: right;
 }
 #container #content {
   padding: 20px 0 40px 0;

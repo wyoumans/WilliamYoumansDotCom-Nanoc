@@ -1,6 +1,6 @@
 //document.ready
 $(function(){
-  $("ul.tools img")
+  $("ul.tools img, footer #social img")
   .mouseenter(function(){
     $(this).attr("src", $(this).attr("src").replace(/-bw/, ""));
   })
