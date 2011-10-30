@@ -54,6 +54,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+@font-face {
+  font-family: "BanksiaBold";
+  src: url(/fonts/banksb20eot.eot) format('opentype'), url(/fonts/banksb20woff.woff) format('woff'), url(/fonts/banksb20ttf.ttf) format('truetype'), url(/fonts/banksb20svg.svg#BanksiaBold) format('svg');
+}
+
+@font-face {
+  font-family: "BanksiaRegular";
+  src: url(/fonts/banksiaeot.eot) format('opentype'), url(/fonts/banksiawoff.woff) format('woff'), url(/fonts/banksiattf.ttf) format('truetype'), url(/fonts/banksiasvg.svg#BanksiaRegular) format('svg');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,14 +103,15 @@ a:active {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Graublau Web", "Graublau", Helvetica, Arial, sans-serif;
+  font-family: "BanksiaRegular", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   margin: 10px 0;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 30px;
+  line-height: 34px;
 }
 
 h2 {

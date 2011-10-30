@@ -9,6 +9,9 @@ $orange: #C60
 $white: #FFF
 $transparent: rgba(0,0,0,0)
 
++font-face("BanksiaBold", font-files("/fonts/banksb20eot.eot", opentype, "/fonts/banksb20woff.woff", woff, "/fonts/banksb20ttf.ttf", truetype, "/fonts/banksb20svg.svg#BanksiaBold", svg))
++font-face("BanksiaRegular", font-files("/fonts/banksiaeot.eot", opentype, "/fonts/banksiawoff.woff", woff, "/fonts/banksiattf.ttf", truetype, "/fonts/banksiasvg.svg#BanksiaRegular", svg))
+
 *
   margin: 0
   padding: 0
@@ -38,14 +41,15 @@ a
 
 h1, h2, h3, h4
   font:
-    family: 'Graublau Web', 'Graublau', Helvetica, Arial, sans-serif
+    family: 'BanksiaRegular', Helvetica, Arial, sans-serif
     weight: normal
     style: normal
   margin: 10px 0
 
 h1
   font:
-    size: 26px
+    size: 30px
+  line-height: 34px
 
 h2
   font:
