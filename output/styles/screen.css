@@ -95,13 +95,13 @@ a {
 }
 
 a {
-  color: #223344;
+  color: #cc6600;
 }
 a:visited {
   color: #cc6600;
 }
 a:hover {
-  color: #223344;
+  color: #cc6600;
 }
 a:active {
   color: #cc6600;
@@ -190,6 +190,9 @@ h3.second {
   min-height: 720px;
   height: auto !important;
   height: 720px;
+}
+#container #content a:hover {
+  text-decoration: underline;
 }
 #container #content .three {
   width: 31%;
