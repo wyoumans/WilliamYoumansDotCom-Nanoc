@@ -23,7 +23,7 @@ $(function(){
     window.history.pushState(new_url, new_url, "/" + new_url);
     $("#content").stop(false, true).toggle("drop", 500, function() {
       $("body").attr("id", new_url);
-      $("#content").html("<h1>" + new_title + "</h1>").toggle("drop", 500);
+      $("#content").html("<h1>" + new_title + "</h1><p><Coming soon, maybe/p>").toggle("drop", 500);
     });
   });
 });
