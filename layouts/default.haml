@@ -11,7 +11,7 @@
 %html{:lang =>"en"}
   %head
     %meta{:charset =>"utf-8"}
-    %title William Youmans | Web Developer, World Traveler
+    %title William Youmans | #{@item[:title]}
     %link{:rel => "shortcut icon", :href => "/images/favicon.ico"}
     %link{:rel => "stylesheet", :type =>"text/css", :href => "/styles/screen.css#{$random}", :media =>"screen"}
     %script{:src => "/scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
@@ -34,7 +34,8 @@
             %li
               %a{:href => "/"}
                 Blog
-      %section{:id => "content"}
+      #content
         = yield
+        .clear
       %footer
         &copy;2011 William Youmans

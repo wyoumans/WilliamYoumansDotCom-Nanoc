@@ -54,16 +54,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-@font-face {
-  font-family: "BanksiaBold";
-  src: url(/fonts/banksb20eot.eot) format('opentype'), url(/fonts/banksb20woff.woff) format('woff'), url(/fonts/banksb20ttf.ttf) format('truetype'), url(/fonts/banksb20svg.svg#BanksiaBold) format('svg');
-}
-
-@font-face {
-  font-family: "BanksiaRegular";
-  src: url(/fonts/banksiaeot.eot) format('opentype'), url(/fonts/banksiawoff.woff) format('woff'), url(/fonts/banksiattf.ttf) format('truetype'), url(/fonts/banksiasvg.svg#BanksiaRegular) format('svg');
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -80,7 +70,7 @@ body {
   background-color: #aac8e0;
   background-image: url("/images/shade.jpg");
   background-repeat: repeat-x;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -89,20 +79,20 @@ a {
 }
 
 a {
-  color: white;
+  color: #aac8e0;
 }
 a:visited {
-  color: #1b2949;
+  color: #223344;
 }
 a:hover {
-  color: #1b2949;
+  color: #aac8e0;
 }
 a:active {
-  color: #1b2949;
+  color: #223344;
 }
 
 h1, h2, h3, h4 {
-  font-family: "BanksiaBold";
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -124,7 +114,6 @@ h3 {
 }
 
 #container {
-  border: 1px solid yellow;
   width: 1000px;
   margin: 0 auto;
   padding: 0;
@@ -133,15 +122,49 @@ h3 {
 #container header {
   margin: 150px 0 0 0;
   text-align: center;
-  border: 1px solid red;
+  position: relative;
+  height: 169px;
 }
 #container header nav {
-  border: 1px solid green;
   text-align: left;
+  position: absolute;
+  bottom: 0;
+}
+#container header nav ul {
+  margin: 0;
+  padding: 0;
+}
+#container header nav ul li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  padding: 0;
+  margin: 0;
+  *display: inline;
+  text-align: center;
+}
+#container header nav ul li a {
+  display: block;
+  padding: 15px 0;
+  width: 100px;
+}
+#container header nav ul li a:hover {
+  background-color: #223344;
 }
 #container footer {
-  border: 1px solid pink;
+  text-alight: right;
 }
-#container section#content {
-  border: 1px solid orange;
+#container #content {
+  padding: 20px 0 40px 0;
+}
+#container #content .three {
+  width: 31%;
+  float: left;
+  margin: 0 10px;
+}
+#container #content .three.first {
+  margin-left: 0;
+}
+#container #content .three.last {
+  margin-right: 0;
 }

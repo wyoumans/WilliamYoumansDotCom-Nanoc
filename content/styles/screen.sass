@@ -2,12 +2,9 @@
 @import compass/reset
 @import compass/typography/links/link-colors
 
-$red: #B12319
-$blue: #1B2949
+$dark_blue: #223344
+$light_blue: #AAC8E0
 $white: #FFF
-
-+font-face("BanksiaBold", font-files("/fonts/banksb20eot.eot", opentype, "/fonts/banksb20woff.woff", woff, "/fonts/banksb20ttf.ttf", truetype, "/fonts/banksb20svg.svg#BanksiaBold", svg))
-+font-face("BanksiaRegular", font-files("/fonts/banksiaeot.eot", opentype, "/fonts/banksiawoff.woff", woff, "/fonts/banksiattf.ttf", truetype, "/fonts/banksiasvg.svg#BanksiaRegular", svg))
 
 *
   margin: 0
@@ -17,15 +14,15 @@ $white: #FFF
   outline: 0
 
 body
-  color: #223344
+  color: $dark_blue
   margin: 0
   padding: 0
   background:
-    color: #AAC8E0
+    color: $light_blue
     image: url('/images/shade.jpg')
     repeat: repeat-x
   font:
-    family: Helvetica, Arial, sans-serif
+    family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif
     size: 14px
 
 a
@@ -33,11 +30,11 @@ a
     decoration: none
 
 a
-  +link-colors($white, $blue, $blue, $blue)
+  +link-colors($light_blue, $light_blue, $dark_blue, $dark_blue)
 
 h1, h2, h3, h4
   font:
-    family: "BanksiaBold"
+    family: Helvetica, Arial, sans-serif
     weight: normal
     style: normal
 
@@ -57,7 +54,6 @@ h3
   clear: both
 
 #container
-  border: 1px solid yellow
   width: 1000px
   margin: 0 auto
   padding: 0
@@ -67,14 +63,49 @@ h3
   header
     margin: 150px 0 0 0
     text-align: center
-    border: 1px solid red
+    position: relative
+    height: 169px
 
     nav
-      border: 1px solid green
       text-align: left
+      position: absolute
+      bottom: 0
+
+      ul
+        margin: 0
+        padding: 0
+
+        li
+          display: -moz-inline-stack
+          display: inline-block
+          zoom: 1
+          padding: 0
+          margin: 0
+          *display: inline
+          text-align: center
+
+          a
+            display: block
+            padding: 15px 0
+            width: 100px
+
+          a:hover
+            background:
+              color: $dark_blue
 
   footer
-    border: 1px solid pink
+    text-alight: right
 
-  section#content
-    border: 1px solid orange
+  #content
+    padding: 20px 0 40px 0
+
+    .three
+      width: 31%
+      float: left
+      margin: 0 10px
+
+    .three.first
+      margin-left: 0
+
+    .three.last
+      margin-right: 0
