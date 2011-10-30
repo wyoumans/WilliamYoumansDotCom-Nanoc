@@ -56,12 +56,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "BanksiaBold";
-  src: url('/output/styles/fonts/../fonts/banksb20eot.eot') format('opentype'), url('/output/styles/fonts/../fonts/banksb20woff.woff') format('woff'), url('/output/styles/fonts/../fonts/banksb20ttf.ttf') format('truetype'), url('/output/styles/fonts/../fonts/banksb20svg.svg#BanksiaBold') format('svg');
+  src: url(/fonts/banksb20eot.eot) format('opentype'), url(/fonts/banksb20woff.woff) format('woff'), url(/fonts/banksb20ttf.ttf) format('truetype'), url(/fonts/banksb20svg.svg#BanksiaBold) format('svg');
 }
 
 @font-face {
   font-family: "BanksiaRegular";
-  src: url('/output/styles/fonts/../fonts/banksbeot.eot') format('opentype'), url('/output/styles/fonts/../fonts/banksbwoff.woff') format('woff'), url('/output/styles/fonts/../fonts/banksbttf.ttf') format('truetype'), url('/output/styles/fonts/../fonts/banksbsvg.svg#BanksiaRegular') format('svg');
+  src: url(/fonts/banksiaeot.eot) format('opentype'), url(/fonts/banksiawoff.woff) format('woff'), url(/fonts/banksiattf.ttf) format('truetype'), url(/fonts/banksiasvg.svg#BanksiaRegular) format('svg');
 }
 
 * {
@@ -102,24 +102,46 @@ a:active {
 }
 
 h1, h2, h3, h4 {
-  font-family: "BanksiaRegular";
+  font-family: "BanksiaBold";
   font-weight: normal;
   font-style: normal;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .clear {
   clear: both;
 }
 
-header {
-  margin: 100px 0 0 0;
-  text-align: center;
-}
-
 #container {
-  border: 1px solid red;
+  border: 1px solid yellow;
   width: 1000px;
-  margin: 270px auto 0 auto;
+  margin: 0 auto;
   padding: 0;
   background-color: transparent;
+}
+#container header {
+  margin: 150px 0 0 0;
+  text-align: center;
+  border: 1px solid red;
+}
+#container header nav {
+  border: 1px solid green;
+  text-align: left;
+}
+#container footer {
+  border: 1px solid pink;
+}
+#container section#content {
+  border: 1px solid orange;
 }

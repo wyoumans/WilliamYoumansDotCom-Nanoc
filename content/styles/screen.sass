@@ -6,8 +6,8 @@ $red: #B12319
 $blue: #1B2949
 $white: #FFF
 
-+font-face("BanksiaBold", font-files("../fonts/banksb20eot.eot", opentype, "../fonts/banksb20woff.woff", woff, "../fonts/banksb20ttf.ttf", truetype, "../fonts/banksb20svg.svg#BanksiaBold", svg))
-+font-face("BanksiaRegular", font-files("../fonts/banksbeot.eot", opentype, "../fonts/banksbwoff.woff", woff, "../fonts/banksbttf.ttf", truetype, "../fonts/banksbsvg.svg#BanksiaRegular", svg))
++font-face("BanksiaBold", font-files("/fonts/banksb20eot.eot", opentype, "/fonts/banksb20woff.woff", woff, "/fonts/banksb20ttf.ttf", truetype, "/fonts/banksb20svg.svg#BanksiaBold", svg))
++font-face("BanksiaRegular", font-files("/fonts/banksiaeot.eot", opentype, "/fonts/banksiawoff.woff", woff, "/fonts/banksiattf.ttf", truetype, "/fonts/banksiasvg.svg#BanksiaRegular", svg))
 
 *
   margin: 0
@@ -37,21 +37,44 @@ a
 
 h1, h2, h3, h4
   font:
-    family: "BanksiaRegular"
+    family: "BanksiaBold"
     weight: normal
     style: normal
+
+h1
+  font:
+    size: 26px
+
+h2
+  font:
+    size: 22px
+
+h3
+  font:
+    size: 18px
 
 .clear
   clear: both
 
-header
-  margin: 100px 0 0 0
-  text-align: center
-
 #container
-  border: 1px solid red
+  border: 1px solid yellow
   width: 1000px
-  margin: 270px auto 0 auto
+  margin: 0 auto
   padding: 0
   background:
     color: transparent
+
+  header
+    margin: 150px 0 0 0
+    text-align: center
+    border: 1px solid red
+
+    nav
+      border: 1px solid green
+      text-align: left
+
+  footer
+    border: 1px solid pink
+
+  section#content
+    border: 1px solid orange
