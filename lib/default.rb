@@ -23,9 +23,10 @@ class Nanoc3::Item
   end
 end
 
-# To prevent caching the js and css on dev server
-# append a random query string to each path
-$random = '?' + rand(500000).to_s;
+$devserver = false
 
-# For output used on the TV
-#$random = '';
+if $devserver
+  $random = '?' + rand(500000).to_s
+else
+  $random = ''
+end

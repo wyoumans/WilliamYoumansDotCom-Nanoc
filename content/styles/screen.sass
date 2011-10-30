@@ -11,6 +11,7 @@ $transparent: rgba(0,0,0,0)
 
 +font-face("BanksiaBold", font-files("/fonts/banksb20eot.eot", opentype, "/fonts/banksb20woff.woff", woff, "/fonts/banksb20ttf.ttf", truetype, "/fonts/banksb20svg.svg#BanksiaBold", svg))
 +font-face("BanksiaRegular", font-files("/fonts/banksiaeot.eot", opentype, "/fonts/banksiawoff.woff", woff, "/fonts/banksiattf.ttf", truetype, "/fonts/banksiasvg.svg#BanksiaRegular", svg))
++font-face("TheanoOldStyle", font-files("/fonts/TheanoOldStyleeot.eot", opentype, "/fonts/TheanoOldStylewoff.woff", woff, "/fonts/TheanoOldStylettf.ttf", truetype, "/fonts/TheanoOldStylesvg.svg#TheanoOldStyle", svg))
 
 *
   margin: 0
@@ -41,7 +42,7 @@ a
 
 h1, h2, h3, h4
   font:
-    family: 'BanksiaRegular', Helvetica, Arial, sans-serif
+    family: 'TheanoOldStyle', Helvetica, Arial, sans-serif
     weight: normal
     style: normal
   margin: 10px 0
@@ -49,7 +50,7 @@ h1, h2, h3, h4
 h1
   font:
     size: 30px
-  line-height: 34px
+  margin: 10px 0 25px 0
 
 h2
   font:
@@ -74,13 +75,6 @@ h3
     text-align: center
     position: relative
     height: 173px
-    
-    #logo
-      font:
-        family: 'BanksiaRegular', Helvetica, Arial, sans-serif
-        weight: normal
-        style: normal
-      color: $white
 
     nav
       text-align: left
@@ -107,22 +101,31 @@ h3
             color: $dark_blue
 
   footer
-    text-alight: right
-    margin: 0 0 20px 0
+    text-align: right
+    margin: 10px 0 20px 0
+    padding: 10px 0
+    border-top: 1px dashed $grey
 
   #content
     padding: 20px 0 40px 0
+    min-height: 400px
+    height: auto !important
+    height: 400px
 
     .three
       width: 31%
       float: left
-      margin: 0 10px
+      margin: 0 17px
 
     .three.first
       margin-left: 0
 
     .three.last
       margin-right: 0
+
+body.index
+  h1
+    text-align: center
 
 body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover
   color: $dark_blue
