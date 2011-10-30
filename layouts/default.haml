@@ -15,10 +15,12 @@
     %link{:rel => "shortcut icon", :href => "/images/favicon.ico"}
     %link{:rel => "stylesheet", :type =>"text/css", :href => "/styles/screen.css#{$random}", :media =>"screen"}
     %script{:src => "/scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/jqueryui.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/easing.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/modernizr.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/response.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/functions.js#{$random}", :type => "text/javascript", :charset => "utf-8"}
-  %body{:class => @item[:url]}
+  %body{:id => @item[:url]}
     #container
       %header
         %a{:href => "/"}
@@ -26,17 +28,20 @@
         %nav
           %ul
             %li{:class => "index"}
-              %a{:href => "/"}
+              %a{:id => "index", :href => "#"}
                 Home
             %li{:class => "photos"}
-              %a{:href => "/photos/"}
+              %a{:id => "photos", :href => "#"}
                 Photos
             %li{:class => "portfolio"}
-              %a{:href => "/portfolio/"}
+              %a{:id => "portfolio", :href => "#"}
                 Portfolio
             %li{:class => "blog"}
-              %a{:href => "/blog/"}
+              %a{:id => "blog", :href => "#"}
                 Blog
+            %li{:class => "contact"}
+              %a{:id => "contact", :href => "#"}
+                Contact
       #content
         = yield
         .clear
