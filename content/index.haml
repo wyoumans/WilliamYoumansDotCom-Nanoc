@@ -1,6 +1,5 @@
 --- 
 browser_title: Web Developer, World Traveler
-navigation_title: Home
 url: index
 ---
 
@@ -12,12 +11,24 @@ url: index
     My Distractions
   %h3
     Currently listening to
-  %p
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales dolor eget massa faucibus id porttitor velit mollis. Donec quis felis purus, nec feugiat felis. Vivamus auctor, augue ac ullamcorper blandit, libero eros rhoncus libero, tempus pulvinar ante est quis sapien. In placerat velit non nunc pharetra malesuada quis sed mi. Maecenas quis felis tellus.
+  %table{:id => "listening"}
+    %tr
+      %td
+        %img{:src => "http://ecx.images-amazon.com/images/I/41vpFym3a7L._SL500_AA300_.jpg"}
+      %td
+        %a{:href => "http://www.amazon.com/Doc-Martin-Collection-1-4-Clunes/dp/B004KVXCB4/bobbharr-20"}
+          Undone
+        <br>by Weezer<br>7 hours ago
   %h3
-    Currently listening to
-  %p
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales dolor eget massa faucibus id porttitor velit mollis. Donec quis felis purus, nec feugiat felis. Vivamus auctor, augue ac ullamcorper blandit, libero eros rhoncus libero, tempus pulvinar ante est quis sapien. In placerat velit non nunc pharetra malesuada quis sed mi. Maecenas quis felis tellus.
+    Currently watching
+  %table{:id => "watching"}
+    %tr
+      %td
+        %img{:src => "http://ecx.images-amazon.com/images/I/41vpFym3a7L._SL500_AA300_.jpg"}
+      %td
+        %a{:href => "http://www.amazon.com/Doc-Martin-Collection-1-4-Clunes/dp/B004KVXCB4/bobbharr-20"}
+          Doc Martin
+        <br>Genre: British TV<br>
 
 %section{:class => "three"}
   %h2

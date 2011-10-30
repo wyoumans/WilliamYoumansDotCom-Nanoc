@@ -205,8 +205,12 @@ body.index ul.tools li {
 body.index ul.tools img {
   width: 50px;
 }
+body.index #watching img, body.index #listening img {
+  padding-right: 10px;
+  width: 90px;
+}
 
-body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover {
+body.photos #container header nav ul li.photos a, body.blog #container header nav ul li.blog a, body.portfolio #container header nav ul li.portfolio a, body.index #container header nav ul li.index a, body #container header nav ul li a:hover {
   color: #223344;
   background-image: linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
   background-image: -o-linear-gradient(bottom, #96aabe 2%, rgba(0, 0, 0, 0) 100%);
