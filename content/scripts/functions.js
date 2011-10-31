@@ -2,6 +2,30 @@ var home_html = "";
 
 //document.ready
 $(function(){
+  preload([
+    '/images/icons/tools/macbook.png',
+    '/images/icons/tools/komodo.png',
+    '/images/icons/tools/espresso.png',
+    '/images/icons/tools/iterm.png',
+    '/images/icons/tools/linux.png',
+    '/images/icons/tools/apache.png',
+    '/images/icons/tools/mysql.png',
+    '/images/icons/tools/php.png',
+    '/images/icons/tools/nanoc.png',
+    '/images/icons/tools/ruby.png',
+    '/images/icons/tools/haml.png',
+    '/images/icons/tools/sass.png',
+    '/images/icons/tools/jquery.png',
+    '/images/icons/tools/git.png',
+    '/images/icons/tools/transmit.png',
+    '/images/icons/tools/alfred.png',
+    '/images/icons/tools/adium.png',
+    '/images/icons/tools/chrome.png',
+    '/images/icons/social/facebook.png',
+    '/images/icons/social/lastfm.png',
+    '/images/icons/social/github.png'
+  ]);
+
   $("ul.tools img, footer #social img")
   .mouseenter(function(){
     $(this).attr("src", $(this).attr("src").replace(/-bw/, ""));
@@ -37,3 +61,9 @@ $(function(){
     });
   });
 });
+
+function preload(arrayOfImages) {
+  $(arrayOfImages).each(function(){
+    $('<img/>')[0].src = this;
+  });
+}
