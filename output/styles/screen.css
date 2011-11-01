@@ -152,12 +152,12 @@ h3.second {
   height: 173px;
 }
 #container header nav {
-  text-align: left;
   position: absolute;
   bottom: 0;
+  text-align: center;
 }
 #container header nav ul {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 #container header nav ul li {

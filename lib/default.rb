@@ -23,7 +23,7 @@ class Nanoc3::Item
   end
 end
 
-$devserver = false
+$devserver = true
 
 if $devserver
   $random = '?' + rand(500000).to_s
