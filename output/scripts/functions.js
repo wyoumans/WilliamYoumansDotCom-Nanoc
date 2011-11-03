@@ -36,7 +36,7 @@ $(function(){
 
   $("nav a").click(function(e){
     e.preventDefault();
-    var new_url = $(this).attr("id");
+    var new_url = $(this).data("url");
     var new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
     var body_class = new_url;
 

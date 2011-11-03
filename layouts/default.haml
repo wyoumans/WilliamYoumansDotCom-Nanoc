@@ -25,23 +25,23 @@
     #container
       %header
         %a{:href => "/"}
-          %img{:src => "/images/template/white_tea.png", :title => "William Youmans", :alt => "William Youmans", :id => "main_logo"}
+          %img#main_logo{:src => "/images/template/white_tea.png", :title => "William Youmans", :alt => "William Youmans"}
         %nav
           %ul
-            %li{:class => "index"}
-              %a{:id => "index", :href => "#"}
+            %li.index
+              %a{:href => "#", :data => {:url => "index"}}
                 Home
-            %li{:class => "photos"}
-              %a{:id => "photos", :href => "#"}
+            %li.photos
+              %a{:href => "#", :data => {:url => "photos"}}
                 Photos
-            %li{:class => "portfolio"}
-              %a{:id => "portfolio", :href => "#"}
+            %li.portfolio
+              %a{:href => "#", :data => {:url => "portfolio"}}
                 Portfolio
-            %li{:class => "blog"}
-              %a{:id => "blog", :href => "#"}
+            %li.blog
+              %a{:href => "#", :data => {:url => "blog"}}
                 Blog
-            %li{:class => "contact"}
-              %a{:id => "contact", :href => "#"}
+            %li.contact
+              %a{:href => "#", :data => {:url => "contact"}}
                 Contact
       #content
         = yield
