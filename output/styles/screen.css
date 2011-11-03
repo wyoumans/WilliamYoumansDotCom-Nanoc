@@ -195,15 +195,19 @@ h3.second {
   text-decoration: underline;
 }
 #container #content .three {
-  width: 31%;
+  width: 447px;
   float: left;
   margin: 0 17px;
+}
+#container #content .three.first, #container #content .three.last {
+  width: 240px;
 }
 #container #content .three.first {
   margin-left: 0;
 }
 #container #content .three.last {
   margin-right: 0;
+  float: right;
 }
 
 body#index h1 {
