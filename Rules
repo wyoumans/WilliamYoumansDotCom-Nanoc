@@ -19,16 +19,13 @@ compile '/styles/*' do
   filter :sass, Compass.sass_engine_options
 end
 compile "/scripts/*" do
-  # Do Nothing!
+  nil # Do Nothing!
 end
 compile "/images/*" do
-  # Do Nothing!
-end
-compile "/ajax/*" do
-  # Do Nothing!
+  nil # Do Nothing!
 end
 compile "/fonts/*" do
-  # Do Nothing!
+  nil # Do Nothing!
 end
 compile '*' do
   filter :haml
@@ -43,9 +40,6 @@ route '/scripts/*' do
   item.identifier.chop + '.js'
 end
 route '/images/*' do
-  item.identifier.chop + '.' + item[:extension]
-end
-route '/ajax/*' do
   item.identifier.chop + '.' + item[:extension]
 end
 route '/fonts/*' do
