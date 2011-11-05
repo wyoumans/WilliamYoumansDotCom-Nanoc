@@ -46,18 +46,13 @@ $(function(){
       new_url = new_url + "/";
     }
 
-    console.log("User wants to go to this page: " + new_title);
     window.history.pushState(new_url, new_url, "/" + new_url);
     $("#content").stop(false, true).toggle("drop", 500, function() {
-      if($("body").attr("id") == "index"){
-        home_html = $("#content").html();
-      }
       $("body").attr("id", body_class);
-      if(body_class == "index"){
-        $("#content").html(home_html).toggle("drop", 500);
-      } else {
-        $("#content").html("<h1>" + new_title + "</h1><p>Coming soon, maybe</p>").toggle("drop", 500);
-      }
+      
+      $.get("/ajax/" + body_class + ".html", function(data){
+        $("#content").html(data).toggle("drop", 500);
+      });
     });
   });
 });

@@ -57,15 +57,19 @@ end
 
 # ajax
 compile '*', :rep => :ajax do
-  if item.binary?
-    # don’t filter binary items
-  else
+  if item[:extension] == 'haml'
     filter :haml
     layout 'ajax'
   end
 end
 route '*', :rep => :ajax do
-  '/ajax' + item.identifier.chop + '.html'
+  if item[:extension] == 'haml'
+    if item.identifier.chop == ''
+      '/ajax/index.html'
+    else
+      '/ajax' + item.identifier.chop + '.html'
+    end
+  end
 end
 
 layout '*', :haml, :format => :html5
