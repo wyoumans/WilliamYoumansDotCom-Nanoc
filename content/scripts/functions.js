@@ -1,5 +1,3 @@
-var home_html = "";
-
 //document.ready
 $(function(){
   preload([
@@ -36,22 +34,28 @@ $(function(){
 
   $("nav a").click(function(e){
     e.preventDefault();
-    var new_url = $(this).data("url");
-    var new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
-    var body_class = new_url;
+    var this_item = $(this);
 
-    if(new_url == "index"){
-      new_url = "";
-    } else {
-      new_url = new_url + "/";
-    }
+    $("#content_ajax").stop(false, true).toggle("drop", "fast", function() {
+      $("#ajax_loading").show();
 
-    window.history.pushState(new_url, new_url, "/" + new_url);
-    $("#content").stop(false, true).toggle("drop", 500, function() {
+      var new_url = this_item.data("url");
+      var new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
+      var body_class = new_url;
+
+      if(new_url == "index"){
+        new_url = "";
+      } else {
+        new_url = new_url + "/";
+      }
+
+      window.history.pushState(new_url, new_url, "/" + new_url);
+
       $("body").attr("id", body_class);
       
       $.get("/ajax/" + body_class + ".html", function(data){
-        $("#content").html(data).toggle("drop", 500);
+        $("#ajax_loading").hide();
+        $("#content_ajax").html(data).toggle("drop", "fast");
       });
     });
   });

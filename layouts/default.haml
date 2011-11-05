@@ -46,8 +46,11 @@
               %a{:href => "#", :data => {:url => "contact"}}
                 Contact
       #content
-        = yield
+        #content_ajax
+          = yield
         .clear
+        #ajax_loading
+          %img{:src => "/images/template/ajax-loading.gif", :alt => "Ajax Loading"}
       %footer
         #copyright
           &copy;2011 William Youmans
