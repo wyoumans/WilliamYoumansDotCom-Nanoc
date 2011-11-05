@@ -55,13 +55,17 @@ route '*' do
   item.identifier + 'index.html'
 end
 
-# ajax accessible partials
-compile '*' do
-  filter :haml
-  layout 'ajax'
+# ajax
+compile '*', :rep => :ajax do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :haml
+    layout 'ajax'
+  end
 end
-route '*' do
-  '/ajax' + item.identifier
+route '*', :rep => :ajax do
+  '/ajax' + item.identifier.chop + '.html'
 end
 
 layout '*', :haml, :format => :html5
