@@ -58,10 +58,10 @@ $(function(){
 
       window.history.pushState(new_url, new_url, "/" + new_url);
       document.title = document.title.replace(/^(.*)\|.*$/, "$1 | " + new_title);
-      $("body").attr("id", body_id);
 
       $.get("/ajax/" + body_id + ".html", function(data){
         //$("#ajax_loading").hide();
+        $("body").attr("id", body_id);
         $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
       });
     });
