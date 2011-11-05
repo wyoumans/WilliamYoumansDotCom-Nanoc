@@ -20,8 +20,9 @@ watcher:
   notify_on_compilation_failure: true
 
 deploy:
-  options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
   default:
+    options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
     dst: "dreamhost:~/beta.williamyoumans.com"
   live:
+    options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
     dst: "dreamhost:~/williamyoumans.com"
