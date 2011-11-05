@@ -45,3 +45,5 @@ watcher:
 deploy:
   default:
     dst: "dreamhost:~/beta.williamyoumans.com"
+  live:
+    dst: "dreamhost:~/williamyoumans.com"
