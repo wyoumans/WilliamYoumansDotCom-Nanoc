@@ -1,0 +1,12 @@
+ErrorDocument 404 /404/
+
+# deny access to the top-level git repository:
+RewriteEngine On
+RewriteRule \.git - [F,L]
+
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^.*(localhost)|(ubuntu).*$ [NC]
+RewriteCond %{HTTP_HOST} !^www.williamyoumans.com$ [NC]
+RewriteRule ^(.*)$ http://www.williamyoumans.com/$1 [L,R=301]
+RewriteCond %{THE_REQUEST} ^.*/index\.php
+RewriteRule ^(.*)index\.php$ /$1 [R=301]
