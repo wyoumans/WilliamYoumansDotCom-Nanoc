@@ -11,7 +11,7 @@ include Nanoc3::Helpers::Tagging
 include Nanoc3::Helpers::Text
 include Nanoc3::Helpers::XMLSitemap
 
-$devserver = false
+$devserver = true
 
 if $devserver
   $random = '?' + rand(500000).to_s

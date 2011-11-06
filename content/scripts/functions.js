@@ -3,6 +3,13 @@ var animation_speed = "slow";
 
 //document.ready
 $(function(){
+  
+  // I choose not to spend the time supporting internet explorer
+  if(getInternetExplorerVersion() < 0){
+    $("#navigation").html("");
+    $("#content").html("<center>You are using an unsupported browser. To see all the wonderment the internet has to offer, please <a href='http://www.google.com/chrome'>upgrade</a>!</center>");
+  }
+
   preload([
     '/images/icons/tools/macbook.png',
     '/images/icons/tools/komodo.png',
@@ -68,8 +75,28 @@ $(function(){
   });
 });
 
+$(window).bind('onpopstate', function(e) {
+    var state = window.history.getState();
+    Console.log("Stuff and things: " + state);
+    e.preventDefault();
+    return false;
+});
+
 function preload(arrayOfImages) {
   $(arrayOfImages).each(function(){
     $('<img/>')[0].src = this;
   });
+}
+// Returns the version of Internet Explorer or a -1
+// (indicating the use of another browser).
+function getInternetExplorerVersion() {
+  var rv = -1; // Return value assumes failure.
+  if (navigator.appName == 'Microsoft Internet Explorer')
+  {
+    var ua = navigator.userAgent;
+    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null)
+      rv = parseFloat( RegExp.$1 );
+  }
+  return rv;
 }
