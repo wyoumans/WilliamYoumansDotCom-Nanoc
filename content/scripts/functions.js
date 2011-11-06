@@ -5,7 +5,7 @@ var animation_speed = "slow";
 $(function(){
   
   // I choose not to spend the time supporting internet explorer
-  if(getInternetExplorerVersion() < 0){
+  if(getInternetExplorerVersion() > 0){
     $("#navigation").html("");
     $("#content").html("<center>You are using an unsupported browser. To see all the wonderment the internet has to offer, please <a href='http://www.google.com/chrome'>upgrade</a>!</center>");
   }
