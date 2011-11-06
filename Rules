@@ -48,11 +48,19 @@ end
 
 # main html pages
 compile '*' do
-  filter :haml
-  layout 'default'
+  if item[:extension] == 'haml'
+    filter :haml
+    layout 'default'
+  else
+    nil
+  end
 end
 route '*' do
-  item.identifier + 'index.html'
+  if item[:extension] == 'haml'
+    item.identifier + 'index.html'
+  else
+    item.identifier.chop + '.' + item[:extension]
+  end
 end
 
 # ajax
