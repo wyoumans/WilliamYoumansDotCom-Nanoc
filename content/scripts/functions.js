@@ -54,8 +54,6 @@ $(function(){
     if($("body").attr("id") == new_url)
       return;
 
-    $("body").attr("id", body_id);
-
     $("#content_ajax").stop(false, true).toggle(animation_effect, animation_speed, function() {
       //$("#ajax_loading").show();
 
@@ -70,6 +68,7 @@ $(function(){
 
       $.get("/ajax/" + body_id + ".html", function(data){
         //$("#ajax_loading").hide();
+        $("body").attr("id", body_id);
         $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
       });
     });
