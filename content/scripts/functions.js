@@ -87,7 +87,9 @@ function changePage(new_url){
   });
 
   // Inform Google Analytics of the change
-  _gaq.push(['_trackPageview', new_url])
+  if ( typeof _gaq !== 'undefined' ) {
+    _gaq.push(['_trackPageview', new_url]);
+  }
 }
 
 function preload(arrayOfImages) {
