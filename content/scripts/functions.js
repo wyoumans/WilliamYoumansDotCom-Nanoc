@@ -54,13 +54,19 @@ $(function(){
   $("nav a, a#logo").click(function(e){
     e.preventDefault();
     var change_url = $(this).data("url");
+    if(change_url == "index"){
+      change_url = "";
+    } else {
+      change_url = change_url + "/";
+    }
+
     History.pushState(change_url, change_url, "/" + change_url);
   });
 });
 
 function changePage(new_url){
   var new_title = "Web Developer, World Traveler"
-  if(new_url != "index"){
+  if(new_url != ""){
     new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
   }
 
@@ -70,12 +76,6 @@ function changePage(new_url){
 
   $("#content_ajax").stop(false, true).toggle(animation_effect, animation_speed, function() {
     //$("#ajax_loading").show();
-
-    if(new_url == "index"){
-      new_url = "";
-    } else {
-      new_url = new_url + "/";
-    }
 
     document.title = document.title.replace(/^(.*)\|.*$/, "$1 | " + new_title);
 
