@@ -85,6 +85,9 @@ function changePage(new_url){
       $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
     });
   });
+
+  // Inform Google Analytics of the change
+  _gaq.push(['_trackPageview', new_url])
 }
 
 function preload(arrayOfImages) {
