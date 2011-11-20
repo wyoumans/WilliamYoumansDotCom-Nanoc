@@ -21,8 +21,9 @@
     / Scripts
     %script{:src => "/scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/jqueryui.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "/scripts/livequery.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/modernizr.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/livequery.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/history.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/functions.js#{$random}", :type => "text/javascript", :charset => "utf-8"}
     - if !$devserver
       %script{:src => "/scripts/ga.js", :type => "text/javascript", :charset => "utf-8"}
@@ -31,7 +32,7 @@
       %header
 
         / Text logo for SEO cred
-        %a#logo{:href => "/"}
+        %a#logo{:href => "/", :data => {:url => "index"}}
           William Youmans<br>
           %span
             web developer &ndash; world traveler

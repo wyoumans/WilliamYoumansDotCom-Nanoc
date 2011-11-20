@@ -3,12 +3,21 @@ var animation_speed = "slow";
 
 //document.ready
 $(function(){
-  
-  // I choose not to spend the time supporting internet explorer
-  if(getInternetExplorerVersion() > 0){
-    $("#navigation").html("");
-    $("#content").html("<center>You are using an unsupported browser. To see all the wonderment the internet has to offer, please <a href='http://www.google.com/chrome'>upgrade</a>!</center>");
-  }
+
+  // Prepare
+  var History = window.History;
+
+  // Bind to StateChange Event
+  History.Adapter.bind(window,'statechange',function(){
+    var State = History.getState();
+    var next_page = State.title.replace(/\//, "", next_page);
+    if(next_page == ""){
+      next_page = "index";
+    }
+    changePage(next_page);
+
+    //History.log(State.data, State.title, State.url);
+  });
 
   preload([
     '/images/icons/tools/macbook.png',
@@ -42,45 +51,41 @@ $(function(){
     $(this).attr("src", $(this).attr("src").replace(/\.png/, "-bw.png"));
   });
 
-  $("nav a").click(function(e){
+  $("nav a, a#logo").click(function(e){
     e.preventDefault();
-    var new_url = $(this).data("url");
-    var new_title = "Web Developer, World Traveler"
-    if(new_url != "index"){
-      new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
-    }
-
-    var body_id = new_url;
-    if($("body").attr("id") == new_url)
-      return;
-
-    $("#content_ajax").stop(false, true).toggle(animation_effect, animation_speed, function() {
-      //$("#ajax_loading").show();
-
-      if(new_url == "index"){
-        new_url = "";
-      } else {
-        new_url = new_url + "/";
-      }
-
-      window.history.pushState(new_url, new_url, "/" + new_url);
-      document.title = document.title.replace(/^(.*)\|.*$/, "$1 | " + new_title);
-
-      $.get("/ajax/" + body_id + ".html", function(data){
-        //$("#ajax_loading").hide();
-        $("body").attr("id", body_id);
-        $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
-      });
-    });
+    var change_url = $(this).data("url");
+    History.pushState(change_url, change_url, "/" + change_url);
   });
 });
 
-$(window).bind('onpopstate', function(e) {
-    var state = window.history.getState();
-    Console.log("Stuff and things: " + state);
-    e.preventDefault();
-    return false;
-});
+function changePage(new_url){
+  var new_title = "Web Developer, World Traveler"
+  if(new_url != "index"){
+    new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
+  }
+
+  var body_id = new_url;
+  if($("body").attr("id") == new_url)
+    return;
+
+  $("#content_ajax").stop(false, true).toggle(animation_effect, animation_speed, function() {
+    //$("#ajax_loading").show();
+
+    if(new_url == "index"){
+      new_url = "";
+    } else {
+      new_url = new_url + "/";
+    }
+
+    document.title = document.title.replace(/^(.*)\|.*$/, "$1 | " + new_title);
+
+    $.get("/ajax/" + body_id + ".html", function(data){
+      //$("#ajax_loading").hide();
+      $("body").attr("id", body_id);
+      $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
+    });
+  });
+}
 
 function preload(arrayOfImages) {
   $(arrayOfImages).each(function(){
