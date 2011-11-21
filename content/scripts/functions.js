@@ -10,13 +10,12 @@ $(function(){
   // Bind to StateChange Event
   History.Adapter.bind(window,'statechange',function(){
     var State = History.getState();
-    var next_page = State.title.replace(/\//, "", next_page);
+    var next_page = State.url.replace(/(.*\.com|.*:3000)/, "").replace(/\//g, "");
+
     if(next_page == ""){
       next_page = "index";
     }
     changePage(next_page);
-
-    //History.log(State.data, State.title, State.url);
   });
 
   preload([
@@ -53,42 +52,40 @@ $(function(){
 
   $("nav a, a#logo").click(function(e){
     e.preventDefault();
+
     var change_url = $(this).data("url");
+
+    var new_title = "Web Developer, World Traveler"
+
     if(change_url == "index"){
       change_url = "";
     } else {
+      new_title = change_url.charAt(0).toUpperCase() + change_url.slice(1);
       change_url = change_url + "/";
     }
 
-    History.pushState(change_url, change_url, "/" + change_url);
+    History.pushState(change_url, document.title.replace(/^(.*)\|.*$/, "$1 | ") + new_title, "/" + change_url);
   });
 });
 
 function changePage(new_url){
-  var new_title = "Web Developer, World Traveler"
-  if(new_url != ""){
-    new_title = new_url.charAt(0).toUpperCase() + new_url.slice(1);
-  }
 
-  var body_id = new_url;
   if($("body").attr("id") == new_url)
     return;
 
   $("#content_ajax").stop(false, true).toggle(animation_effect, animation_speed, function() {
     //$("#ajax_loading").show();
 
-    document.title = document.title.replace(/^(.*)\|.*$/, "$1 | " + new_title);
-
-    $.get("/ajax/" + body_id + ".html", function(data){
+    $.get("/ajax/" + new_url + ".html", function(data){
       //$("#ajax_loading").hide();
-      $("body").attr("id", body_id);
+      $("body").attr("id", new_url);
       $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
     });
   });
 
   // Inform Google Analytics of the change
   if ( typeof _gaq !== 'undefined' ) {
-    _gaq.push(['_trackPageview', new_url]);
+    _gaq.push(['_trackPageview', new_url + "/"]);
   }
 }
 
@@ -96,17 +93,4 @@ function preload(arrayOfImages) {
   $(arrayOfImages).each(function(){
     $('<img/>')[0].src = this;
   });
-}
-// Returns the version of Internet Explorer or a -1
-// (indicating the use of another browser).
-function getInternetExplorerVersion() {
-  var rv = -1; // Return value assumes failure.
-  if (navigator.appName == 'Microsoft Internet Explorer')
-  {
-    var ua = navigator.userAgent;
-    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-    if (re.exec(ua) != null)
-      rv = parseFloat( RegExp.$1 );
-  }
-  return rv;
 }
