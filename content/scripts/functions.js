@@ -8,7 +8,7 @@ $(function(){
   var History = window.History;
 
   // Bind to StateChange Event
-  History.Adapter.bind(window,'statechange',function(){
+  History.Adapter.bind(window,"statechange",function(){
     var State = History.getState();
     var next_page = State.url.replace(/(.*\.com|.*:3000)/, "").replace(/\//g, "");
 
@@ -19,27 +19,27 @@ $(function(){
   });
 
   preload([
-    '/images/icons/tools/macbook.png',
-    '/images/icons/tools/komodo.png',
-    '/images/icons/tools/espresso.png',
-    '/images/icons/tools/iterm.png',
-    '/images/icons/tools/linux.png',
-    '/images/icons/tools/apache.png',
-    '/images/icons/tools/mysql.png',
-    '/images/icons/tools/php.png',
-    '/images/icons/tools/nanoc.png',
-    '/images/icons/tools/ruby.png',
-    '/images/icons/tools/haml.png',
-    '/images/icons/tools/sass.png',
-    '/images/icons/tools/jquery.png',
-    '/images/icons/tools/git.png',
-    '/images/icons/tools/transmit.png',
-    '/images/icons/tools/alfred.png',
-    '/images/icons/tools/adium.png',
-    '/images/icons/tools/chrome.png',
-    '/images/icons/social/facebook.png',
-    '/images/icons/social/lastfm.png',
-    '/images/icons/social/github.png'
+    "/images/icons/tools/macbook.png",
+    "/images/icons/tools/komodo.png",
+    "/images/icons/tools/espresso.png",
+    "/images/icons/tools/iterm.png",
+    "/images/icons/tools/linux.png",
+    "/images/icons/tools/apache.png",
+    "/images/icons/tools/mysql.png",
+    "/images/icons/tools/php.png",
+    "/images/icons/tools/nanoc.png",
+    "/images/icons/tools/ruby.png",
+    "/images/icons/tools/haml.png",
+    "/images/icons/tools/sass.png",
+    "/images/icons/tools/jquery.png",
+    "/images/icons/tools/git.png",
+    "/images/icons/tools/transmit.png",
+    "/images/icons/tools/alfred.png",
+    "/images/icons/tools/adium.png",
+    "/images/icons/tools/chrome.png",
+    "/images/icons/social/facebook.png",
+    "/images/icons/social/lastfm.png",
+    "/images/icons/social/github.png"
   ]);
 
   $("ul.tools img, footer #social img")
