@@ -20,3 +20,6 @@ tmp/
 NERD_tree_3
 phplastfmapi
 output/*
+
+
+*.rvmrc
