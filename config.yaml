@@ -22,7 +22,7 @@ watcher:
 deploy:
   default:
     options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
-    dst: "willyou@willyoumans.com:~/beta.williamyoumans.com"
+    dst: "linode:~/beta.williamyoumans.com"
   live:
     options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
-    dst: "willyou@williamyoumans.com:~/williamyoumans.com"
+    dst: "linode:/srv/williamyoumans.com"
