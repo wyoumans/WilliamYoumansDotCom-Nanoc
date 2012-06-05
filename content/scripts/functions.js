@@ -20,7 +20,7 @@ $(function(){
 
   preload([
     "/images/icons/tools/macbook.png",
-    "/images/icons/tools/komodo.png",
+    "/images/icons/tools/sublime.png",
     "/images/icons/tools/espresso.png",
     "/images/icons/tools/iterm.png",
     "/images/icons/tools/linux.png",
