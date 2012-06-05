@@ -22,7 +22,5 @@ watcher:
 deploy:
   default:
     options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
-    dst: "linode:~/beta.williamyoumans.com"
-  live:
-    options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
-    dst: "linode:/srv/williamyoumans.com"
+    dst: "linode:/srv/williamyoumans.com/public"
+    kind: "rsync"
