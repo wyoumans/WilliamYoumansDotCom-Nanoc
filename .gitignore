@@ -7,11 +7,6 @@
 -.save
 .com.apple.timemachine*
 
-#IDE ignores
-*.komodoproject
-.komodotools
-*.esproj
-
 # Nanoc ignores
 tmp/
 .sass-cache
@@ -20,6 +15,6 @@ tmp/
 NERD_tree_3
 phplastfmapi
 output/*
-
+*.log
 
 *.rvmrc
