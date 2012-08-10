@@ -24,3 +24,7 @@ deploy:
     options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
     dst: "linode:~/www/williamyoumans.com/public_html"
     kind: "rsync"
+  staging:
+    options: [ '-glpPrtvz', '--exclude=".git"', --exclude=".DS_Store" ]
+    dst: "linode:~/www/blog.williamyoumans.com/public_html"
+    kind: "rsync"
