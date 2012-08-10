@@ -7,3 +7,6 @@ url: photos
   Photos
 
 %iframe{:src => 'http://klanoma.tumblr.com/'}
+
+
+<?php echo 'Ha! We have PHP!'; ?>
