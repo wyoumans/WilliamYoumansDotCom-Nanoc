@@ -3,7 +3,7 @@ GEM
   specs:
     adsf (1.1.1)
       rack (>= 1.0.0)
-    chunky_png (1.2.5)
+    chunky_png (1.2.6)
     colored (1.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
