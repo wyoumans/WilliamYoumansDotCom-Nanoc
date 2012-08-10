@@ -6,9 +6,6 @@ url: photos
 %h1
   Photos
 
-%iframe{:src => 'http://klanoma.tumblr.com/'}
-
-
 <?php
 
 //pull most recent blog post from rss
@@ -23,4 +20,5 @@ foreach ($doc->getElementsByTagName('item') as $node) {
   );
 }
 
+var_dump($feed);
 ?>
