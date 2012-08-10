@@ -22,3 +22,6 @@ url: photos
 
   var_dump($feed);
   ?>
+
+%p
+  %a{:href => 'http://klanoma.tumblr.com', :target => '_blank'} See More
