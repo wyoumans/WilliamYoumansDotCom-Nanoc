@@ -50,7 +50,11 @@ function changePage(new_url) {
 
   $("#content_ajax").stop(false, true).toggle(animation_effect, animation_speed, function() {
     //$("#ajax_loading").show();
-    $.get("/ajax/" + new_url + ".html", function(data) {
+    var extension = ".html";
+    if(new_url == "photos") {
+      extension = ".php";
+    }
+    $.get("/ajax/" + new_url + extension, function(data) {
       //$("#ajax_loading").hide();
       $("body").attr("id", new_url);
       $("#content_ajax").html(data).toggle(animation_effect, animation_speed);
