@@ -20,7 +20,21 @@ url: photos
     );
   }
 
-  var_dump($feed);
+  pre($feed);
+
+  function pre($var, $kill = false) {
+    echo '<pre>';
+    if(is_array($var) || is_object($var)) {
+      print_r($var);
+    } else {
+      print_r(htmlentities($var));
+    }
+    echo '</pre>';
+
+    if($kill) {
+      exit();
+    }
+  }
   ?>
 
 %p
