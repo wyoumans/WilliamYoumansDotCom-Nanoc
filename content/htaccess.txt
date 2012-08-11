@@ -4,9 +4,9 @@ ErrorDocument 404 /404/
 RewriteEngine On
 RewriteRule \.git - [F,L]
 
-#RewriteBase /
-#RewriteCond %{HTTP_HOST} !^.*(localhost)|(ubuntu).*$ [NC]
-#RewriteCond %{HTTP_HOST} !^www.williamyoumans.com$ [NC]
-#RewriteRule ^(.*)$ http://www.williamyoumans.com/$1 [L,R=301]
-#RewriteCond %{THE_REQUEST} ^.*/index\.html
-#RewriteRule ^(.*)index\.html$ /$1 [R=301]
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^.*(localhost)|(ubuntu).*$ [NC]
+RewriteCond %{HTTP_HOST} !^www.williamyoumans.com$ [NC]
+RewriteRule ^(.*)$ http://www.williamyoumans.com/$1 [L,R=301]
+RewriteCond %{THE_REQUEST} ^.*/index\.html
+RewriteRule ^(.*)index\.html$ /$1 [R=301]
