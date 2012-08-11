@@ -16,7 +16,9 @@ url: photos
   <?php foreach ($doc->getElementsByTagName('item') as $node): ?>
     <div class="post">
       <h2>
-        <?php echo date('m/d/Y', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)) ?>
+        <span>
+          <?php echo date('m/d/Y', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)) ?>
+        </span>
       </h2>
       <p>
         <?php echo $node->getElementsByTagName('description')->item(0)->nodeValue ?>
@@ -26,5 +28,5 @@ url: photos
     <?php if($count > 5) break; ?>
   <?php endforeach; ?>
 
-.see_more
+.post
   %a{:href => 'http://klanoma.tumblr.com', :target => '_blank'} See More
