@@ -23,11 +23,19 @@ route '/styles/*' do
 end
 
 # scripts
-compile "/scripts/*" do
+compile "/scripts/js/*" do
   nil # Do Nothing!
 end
-route '/scripts/*' do
-  item.identifier.chop + '.js'
+route '/scripts/js/*/' do
+  item.identifier.sub(%r{^/scripts/js}, '/scripts').chop + '.js'
+end
+
+#coffeescript
+compile "/scripts/coffee/*" do
+  filter :coffee
+end
+route '/scripts/coffee/*/' do
+  item.identifier.sub(%r{^/scripts/coffee}, '/scripts').chop + '.js'
 end
 
 #images

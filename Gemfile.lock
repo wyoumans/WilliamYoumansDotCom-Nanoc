@@ -4,6 +4,10 @@ GEM
     adsf (1.1.1)
       rack (>= 1.0.0)
     chunky_png (1.2.6)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.3.3)
     colored (1.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
@@ -11,8 +15,11 @@ GEM
       sass (~> 3.1)
     cri (2.3.0)
       colored (>= 1.2)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     fssm (0.2.9)
     haml (3.1.6)
+    multi_json (1.3.6)
     nanoc (3.4.0)
       cri (~> 2.2)
     rack (1.4.1)
@@ -25,6 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   adsf
+  coffee-script
   compass
   haml
   nanoc
