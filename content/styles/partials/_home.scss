@@ -1,0 +1,32 @@
+body#index {
+  h1 {
+    text-align: center;
+  }
+
+  ul.tools {
+    li {
+      overflow: hidden;
+      height: 50px;
+      margin: 15px;
+      float: left;
+    }
+
+    img {
+      width: 50px;
+    }
+  }
+
+  #watching, #listening, #reading {
+    img {
+      padding-right: 10px;
+      width: 100px;
+    }
+  }
+
+  #projects {
+    img {
+      vertical-align: middle;
+      width: 45%;
+    }
+  }
+}

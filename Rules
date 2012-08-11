@@ -15,8 +15,14 @@ Compass.add_project_configuration('config.rb')
 #   because “*” matches zero or more characters.
 
 # sass styles
+compile '/styles/partials/_*/' do
+  nil
+end
 compile '/styles/*' do
   filter :sass, Compass.sass_engine_options
+end
+route '/styles/partials/_*/' do
+  nil
 end
 route '/styles/*' do
   item.identifier.chop + '.css'

@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:active, *:focus {
+  outline: 0;
+}
+
+::-moz-selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none;
+}
+
+body {
+  color: $dark_blue;
+  margin: 0;
+  padding: 0;
+  background: {
+    color: $light_blue;
+    image: url('/images/template/shade.jpg');
+    repeat: repeat-x;
+  }
+  font: {
+    family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    weight: 300;
+    size: 16px;
+  }
+  line-height: 18px;
+
+  &#contact #container header nav ul li.contact a,
+  &#photos #container header nav ul li.photos a, b
+  &#blog #container header nav ul li.blog a,
+  &#portfolio #container header nav ul li.portfolio a,
+  &#index #container header nav ul li.index a,
+  & #container header nav ul li a:hover {
+    color: $dark_blue;
+    background: {
+      image: linear-gradient(bottom, $grey 2%, $transparent 100%);
+      image: -o-linear-gradient(bottom, $grey 2%, $transparent 100%);
+      image: -moz-linear-gradient(bottom, $grey 2%, $transparent 100%);
+      image: -webkit-linear-gradient(bottom, $grey 2%, $transparent 100%);
+      image: -ms-linear-gradient(bottom, $grey 2%, $transparent 100%);
+    }
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  @include link-colors($orange, $orange, $orange, $orange);
+}
+
+h1, h2, h3, h4 {
+  font: {
+    family: 'BanksiaRegular', Helvetica, Arial, sans-serif;
+    weight: normal;
+    style: normal;
+  }
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 35px;
+  line-height: 35px;
+  margin: 10px 0 25px 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+h3 {
+  font-size: 20px;
+  color: $orange;
+}
+
+h3.second {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed $grey;
+}
+
+.clear {
+  clear: both;
+}
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+
+  header {
+    margin: 150px 0 0 0;
+    text-align: center;
+    position: relative;
+    height: 173px;
+
+    #logo {
+      display: block;
+      font: {
+        size: 50px;
+        family: 'BanksiaRegular', Helvetica, Arial, sans-serif;
+        weight: normal;
+      }
+      line-height: 25px;
+      color: $white;
+      width: 410px;
+      margin: 0 auto;
+      padding: 15px 0 0 40px;
+      background: {
+        image: url(/images/template/tea.png);
+        repeat: no-repeat;
+        position: 0 5px;
+      }
+      text-align: center;
+
+      span {
+        color: $orange;
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+    nav {
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: -moz-inline-stack;
+          display: inline-block;
+          zoom: 1;
+          padding: 0;
+          margin: 0;
+          *display: inline;
+          text-align: center;
+
+          a {
+            display: block;
+            padding: 15px 0;
+            width: 100px;
+            color: $dark_blue;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    margin: 10px 0 20px 0;
+    padding: 10px 0;
+    border-top: 1px dashed $grey;
+
+    #copyright {
+      text-align: right;
+      width: 300px;
+      float: right;
+    }
+  }
+
+  #content {
+    padding: 20px 0;
+    min-height: 670px;
+    height: auto !important;
+    height: 670px;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .three {
+      width: 447px;
+      float: left;
+      margin: 0 17px;
+      &.first, &.last {
+        width: 240px;
+      }
+
+      &.first {
+        margin-left: 0;
+      }
+
+      &.last {
+        margin-right: 0;
+        float: right;
+      }
+    }
+  }
+}
+
+#ajax_loading {
+  text-align: center;
+  display: none;
+  margin-top: 100px;
+}
