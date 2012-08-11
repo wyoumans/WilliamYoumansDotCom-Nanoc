@@ -8,34 +8,23 @@ url: photos
 
 :plain
   <?php
-
+  date_default_timezone_set('America/Denver');
   $doc = new DOMDocument();
   $doc->load('http://klanoma.tumblr.com/rss/');
-  $feed = array();
-  foreach ($doc->getElementsByTagName('item') as $node) {
-    $feed[] = array(
-      'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
-      'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
-      'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
-    );
-  }
-
-  pre($feed);
-
-  function pre($var, $kill = false) {
-    echo '<pre>';
-    if(is_array($var) || is_object($var)) {
-      print_r($var);
-    } else {
-      print_r(htmlentities($var));
-    }
-    echo '</pre>';
-
-    if($kill) {
-      exit();
-    }
-  }
+  $count = 0;
   ?>
+  <?php foreach ($doc->getElementsByTagName('item') as $node): ?>
+    <div class="post">
+      <h2>
+        <?php echo date('m/d/Y', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)) ?>
+      </h2>
+      <p>
+        <?php echo $node->getElementsByTagName('description')->item(0)->nodeValue ?>
+      </p>
+    </div>
+    <?php $count++; ?>
+    <?php if($count > 5) break; ?>
+  <?php endforeach; ?>
 
-%p
+.see_more
   %a{:href => 'http://klanoma.tumblr.com', :target => '_blank'} See More

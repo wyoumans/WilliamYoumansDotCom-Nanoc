@@ -1,5 +1,9 @@
+/*
+ * UA-11130262-4
+ */
+
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-11130262-4']);
+  _gaq.push(['_setAccount', 'XX-XXXXXXX-X']);
   _gaq.push(['_trackPageview']);
 
   (function() {
