@@ -24,7 +24,7 @@
     %script{:src => "/scripts/modernizr.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/livequery.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/history.js", :type => "text/javascript", :charset => "utf-8"}
-    %script{:src => "/scripts/functions.js#{getTimestampQueryString}", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/custom.js#{getTimestampQueryString}", :type => "text/javascript", :charset => "utf-8"}
     - if isProduction
       %script{:src => "/scripts/ga.js", :type => "text/javascript", :charset => "utf-8"}
   %body{:id => @item[:url]}
