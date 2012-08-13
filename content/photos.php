@@ -20,7 +20,7 @@ $count = 0;
 
   %p <?php echo $node->getElementsByTagName('description')->item(0)->nodeValue ?>
 
-<?php $count++; if($count > 5) break; ?>
+<?php if($count++ > 5) break; ?>
 <?php endforeach; ?>
 
 
