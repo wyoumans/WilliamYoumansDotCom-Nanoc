@@ -15,11 +15,6 @@ changePage = (new_url) ->
 
   _gaq.push ["_trackPageview", new_url + "/"]  if typeof _gaq isnt "undefined"
 
-
-preload = (arrayOfImages) ->
-  $(arrayOfImages).each ->
-    $("<img/>")[0].src = this
-
 $ ->
   History = window.History
   History.Adapter.bind window, "statechange", ->
@@ -27,13 +22,6 @@ $ ->
     next_page = State.url.replace(/(.*\.com|.*:3000)/, "").replace(/\//g, "")
     next_page = "index"  if next_page is ""
     changePage next_page
-
-  preload ["/images/icons/tools/macbook.png", "/images/icons/tools/sublime.png", "/images/icons/tools/espresso.png", "/images/icons/tools/iterm.png", "/images/icons/tools/linux.png", "/images/icons/tools/apache.png", "/images/icons/tools/mysql.png", "/images/icons/tools/omnifocus.png", "/images/icons/tools/nanoc.png", "/images/icons/tools/ruby.png", "/images/icons/tools/haml.png", "/images/icons/tools/sass.png", "/images/icons/tools/jquery.png", "/images/icons/tools/git.png", "/images/icons/tools/transmit.png", "/images/icons/tools/alfred.png", "/images/icons/tools/adium.png", "/images/icons/tools/chrome.png", "/images/icons/social/facebook.png", "/images/icons/social/lastfm.png", "/images/icons/social/github.png"]
-
-  $("ul.tools img, footer #social img").livequery("mouseenter", ->
-    $(this).attr "src", $(this).attr("src").replace(/-bw/, "")
-  ).livequery "mouseleave", ->
-    $(this).attr "src", $(this).attr("src").replace(/\.png/, "-bw.png")
 
   $("nav a, a#logo").click (e) ->
     e.preventDefault()

@@ -10,9 +10,22 @@ body#index {
       margin: 15px;
       float: left;
     }
-
-    img {
+    .icon {
+      display:inline-block;
+      zoom:1;
+      *display:inline;
+      height: 50px;
       width: 50px;
+      background: transparent url(/images/icons/tools/sublime.png) no-repeat 0 0;
+      &.macbook {
+        background-image: url(/images/icons/tools/macbook.png);
+      }
+      &.espresso {
+        background-image: url(/images/icons/tools/espresso.png);
+      }
+      &:hover {
+        background-position: 0 0;
+      }
     }
   }
 
