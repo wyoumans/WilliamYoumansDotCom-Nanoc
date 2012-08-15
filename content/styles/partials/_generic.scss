@@ -183,12 +183,12 @@ h3.second {
       *display:inline;
       height: 25px;
       width: 25px;
-      background: transparent url(/images/icons/social/facebook.png) no-repeat 0 -25px;
+      background: transparent url(/images/icons/facebook.png) no-repeat 0 -25px;
       &.lastfm {
-        background-image: url(/images/icons/social/lastfm.png);
+        background-image: url(/images/icons/lastfm.png);
       }
       &.github {
-        background-image: url(/images/icons/social/github.png);
+        background-image: url(/images/icons/github.png);
       }
       &:hover {
         background-position: 0 0;

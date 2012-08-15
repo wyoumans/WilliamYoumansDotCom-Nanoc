@@ -16,60 +16,60 @@ body#index {
       *display:inline;
       height: 50px;
       width: 50px;
-      background: transparent url(/images/icons/tools/sublime.png) no-repeat 0 -50px;
-      &.macbook {
-        background-image: url(/images/icons/tools/macbook.png);
-      }
-      &.espresso {
-        background-image: url(/images/icons/tools/espresso.png);
-      }
-      &.chrome {
-        background-image: url(/images/icons/tools/chrome.png);
-      }
-      &.transmit {
-        background-image: url(/images/icons/tools/transmit.png);
-      }
-      &.sass {
-        background-image: url(/images/icons/tools/sass.png);
-      }
-      &.haml {
-        background-image: url(/images/icons/tools/haml.png);
-      }
-      &.ruby {
-        background-image: url(/images/icons/tools/ruby.png);
-      }
-      &.php {
-        background-image: url(/images/icons/tools/php.png);
-      }
-      &.omnifocus {
-        background-image: url(/images/icons/tools/omnifocus.png);
-      }
-      &.nanoc {
-        background-image: url(/images/icons/tools/nanoc.png);
+      background: transparent url(/images/icons/tools.png) no-repeat 0 50px;
+      &.alfred {
+        background-position: 0 -100px;
       }
       &.apache {
-        background-image: url(/images/icons/tools/apache.png);
+        background-position: 0 -150px;
       }
-      &.linux {
-        background-image: url(/images/icons/tools/linux.png);
+      &.chrome {
+        background-position: 0 -200px;
       }
-      &.iterm {
-        background-image: url(/images/icons/tools/iterm.png);
-      }
-      &.mysql {
-        background-image: url(/images/icons/tools/mysql.png);
-      }
-      &.jquery {
-        background-image: url(/images/icons/tools/jquery.png);
+      &.espresso {
+        background-position: 0 -250px;
       }
       &.git {
-        background-image: url(/images/icons/tools/git.png);
+        background-position: 0 -300px;
       }
-      &.adium {
-        background-image: url(/images/icons/tools/adium.png);
+      &.haml {
+        background-position: 0 -350px;
       }
-      &.alfred {
-        background-image: url(/images/icons/tools/alfred.png);
+      &.iterm {
+        background-position: 0 -400px;
+      }
+      &.jquery {
+        background-position: 0 -450px;
+      }
+      &.linux {
+        background-position: 0 -500px;
+      }
+      &.macbook {
+        background-position: 0 -550px;
+      }
+      &.mysql {
+        background-position: 0 -600px;
+      }
+      &.nanoc {
+        background-position: 0 -650px;
+      }
+      &.omnifocus {
+        background-position: 0 -700px;
+      }
+      &.php {
+        background-position: 0 -750px;
+      }
+      &.ruby {
+        background-position: 0 -800px;
+      }
+      &.sass {
+        background-position: 0 -850px;
+      }
+      &.sublime {
+        background-position: 0 -900px;
+      }
+      &.transmit {
+        background-position: 0 -950px;
       }
       &:hover {
         background-position: 0 0;
