@@ -11,7 +11,8 @@ changePage = (new_url) ->
     $.get "/ajax/" + new_url + extension, (data) ->
       #$("#ajax_loading").hide();
       $("body").attr "id", new_url
-      $("#content_ajax").html(data).toggle animation_effect, animation_speed
+      $("#content_ajax").html(data).toggle animation_effect, animation_speed, ->
+        initiateToolTips()
 
   _gaq.push ["_trackPageview", new_url + "/"]  if typeof _gaq isnt "undefined"
 
