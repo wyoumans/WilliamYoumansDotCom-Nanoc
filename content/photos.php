@@ -1,6 +1,7 @@
 ---
 browser_title: "| Photos"
 url: photos
+meta_description: William Youmans posts pictures from his life daily.
 ---
 
 %h1
