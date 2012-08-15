@@ -23,6 +23,54 @@ body#index {
       &.espresso {
         background-image: url(/images/icons/tools/espresso.png);
       }
+      &.chrome {
+        background-image: url(/images/icons/tools/chrome.png);
+      }
+      &.transmit {
+        background-image: url(/images/icons/tools/transmit.png);
+      }
+      &.sass {
+        background-image: url(/images/icons/tools/sass.png);
+      }
+      &.haml {
+        background-image: url(/images/icons/tools/haml.png);
+      }
+      &.ruby {
+        background-image: url(/images/icons/tools/ruby.png);
+      }
+      &.php {
+        background-image: url(/images/icons/tools/php.png);
+      }
+      &.omnifocus {
+        background-image: url(/images/icons/tools/omnifocus.png);
+      }
+      &.nanoc {
+        background-image: url(/images/icons/tools/nanoc.png);
+      }
+      &.apache {
+        background-image: url(/images/icons/tools/apache.png);
+      }
+      &.linux {
+        background-image: url(/images/icons/tools/linux.png);
+      }
+      &.iterm {
+        background-image: url(/images/icons/tools/iterm.png);
+      }
+      &.mysql {
+        background-image: url(/images/icons/tools/mysql.png);
+      }
+      &.jquery {
+        background-image: url(/images/icons/tools/jquery.png);
+      }
+      &.git {
+        background-image: url(/images/icons/tools/git.png);
+      }
+      &.adium {
+        background-image: url(/images/icons/tools/adium.png);
+      }
+      &.alfred {
+        background-image: url(/images/icons/tools/alfred.png);
+      }
       &:hover {
         background-position: 0 0;
       }
