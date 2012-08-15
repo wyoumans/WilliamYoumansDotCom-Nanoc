@@ -9,6 +9,6 @@ module SiteHelpers
   end
 
   def getTimestampQueryString
-    '?' + Time.now.to_i.to_s;
+    '?' + Time.now.to_i.to_s
   end
 end
