@@ -1,6 +1,9 @@
+animation_effect = "drop"
+animation_speed = "slow"
+
 changePage = (new_url) ->
   return  if $("body").attr("id") is new_url
-  $("#content_ajax").stop(false, true).toggle "drop", "slow", ->
+  $("#content_ajax").stop(false, true).toggle animation_effect, animation_speed, ->
 
     #$("#ajax_loading").show();
     extension = ".html"
@@ -8,7 +11,7 @@ changePage = (new_url) ->
     $.get "/ajax/" + new_url + extension, (data) ->
       #$("#ajax_loading").hide();
       $("body").attr "id", new_url
-      $("#content_ajax").html(data).toggle "drop", "slow"
+      $("#content_ajax").html(data).toggle animation_effect, animation_speed
 
   _gaq.push ["_trackPageview", new_url + "/"]  if typeof _gaq isnt "undefined"
 
