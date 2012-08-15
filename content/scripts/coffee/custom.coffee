@@ -5,11 +5,9 @@ changePage = (new_url) ->
   return  if $("body").attr("id") is new_url
   $("#content_ajax").stop(false, true).toggle animation_effect, animation_speed, ->
 
-    #$("#ajax_loading").show();
     extension = ".html"
     extension = ".php"  if new_url is "photos"
     $.get "/ajax/" + new_url + extension, (data) ->
-      #$("#ajax_loading").hide();
       $("body").attr "id", new_url
       $("#content_ajax").html(data).toggle animation_effect, animation_speed, ->
         initiateToolTips()
