@@ -16,7 +16,7 @@ body#index {
       *display:inline;
       height: 50px;
       width: 50px;
-      background: transparent url(/images/icons/tools/sublime.png) no-repeat 0 0;
+      background: transparent url(/images/icons/tools/sublime.png) no-repeat 0 -50px;
       &.macbook {
         background-image: url(/images/icons/tools/macbook.png);
       }
