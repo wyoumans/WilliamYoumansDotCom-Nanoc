@@ -15,7 +15,14 @@ changePage = (new_url) ->
 
   _gaq.push ["_trackPageview", new_url + "/"]  if typeof _gaq isnt "undefined"
 
+initiateToolTips = () ->
+  $(".tooltip").tipsy
+    fade: true
+    gravity: "w"
+
 $ ->
+  initiateToolTips()
+
   History = window.History
   History.Adapter.bind window, "statechange", ->
     State = History.getState()

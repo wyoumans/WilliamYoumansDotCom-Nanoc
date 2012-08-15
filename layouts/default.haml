@@ -24,6 +24,7 @@
     %script{:src => "/scripts/modernizr.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/livequery.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/history.js", :type => "text/javascript", :charset => "utf-8"}
+    %script{:src => "/scripts/tipsy.js", :type => "text/javascript", :charset => "utf-8"}
     %script{:src => "/scripts/custom.js#{getTimestampQueryString}", :type => "text/javascript", :charset => "utf-8"}
     - if isProduction
       %script{:src => "/scripts/ga.js", :type => "text/javascript", :charset => "utf-8"}
@@ -70,7 +71,7 @@
       %footer
         #copyright &copy;#{getCurrentYear} William Youmans
         #social
-          %a{:href => "http://www.facebook.com/wyoumans", :target => "_blank", :class => "icon facebook"}
-          %a{:href => "http://www.last.fm/user/gotwilly/", :target => "_blank", :class => "icon lastfm"}
-          %a{:href => "http://www.github.com/klanoma", :target => "_blank", :class => "icon github"}
+          %a{:href => "http://www.facebook.com/wyoumans", :target => "_blank", :class => "icon facebook", :title => "Facebook"}
+          %a{:href => "http://www.last.fm/user/gotwilly/", :target => "_blank", :class => "icon lastfm", :title => "LastFM"}
+          %a{:href => "http://www.github.com/klanoma", :target => "_blank", :class => "icon github", :title => "Github"}
         .clear
