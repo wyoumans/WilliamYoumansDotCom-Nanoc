@@ -16,63 +16,63 @@ body#index {
       *display:inline;
       height: 50px;
       width: 50px;
-      background: transparent url(/images/icons/tools.png) no-repeat 0 50px;
+      background: transparent url(/images/icons/tools.png) no-repeat 0 0;
       &.alfred {
-        background-position: 0 -100px;
+        background-position: 0 -50px;
       }
       &.apache {
-        background-position: 0 -150px;
+        background-position: -50px -50px;
       }
       &.chrome {
-        background-position: 0 -200px;
+        background-position: -100px -50px;
       }
       &.espresso {
-        background-position: 0 -250px;
+        background-position: -150px -50px;
       }
       &.git {
-        background-position: 0 -300px;
+        background-position: -200px -50px;
       }
       &.haml {
-        background-position: 0 -350px;
+        background-position: -250px -50px;
       }
       &.iterm {
-        background-position: 0 -400px;
+        background-position: -300px -50px;
       }
       &.jquery {
-        background-position: 0 -450px;
+        background-position: -350px -50px;
       }
       &.linux {
-        background-position: 0 -500px;
+        background-position: -400px -50px;
       }
       &.macbook {
-        background-position: 0 -550px;
+        background-position: -450px -50px;
       }
       &.mysql {
-        background-position: 0 -600px;
+        background-position: -500px -50px;
       }
       &.nanoc {
-        background-position: 0 -650px;
+        background-position: -550px -50px;
       }
       &.omnifocus {
-        background-position: 0 -700px;
+        background-position: -600px -50px;
       }
       &.php {
-        background-position: 0 -750px;
+        background-position: -650px -50px;
       }
       &.ruby {
-        background-position: 0 -800px;
+        background-position: -700px -50px;
       }
       &.sass {
-        background-position: 0 -850px;
+        background-position: -750px -50px;
       }
       &.sublime {
-        background-position: 0 -900px;
+        background-position: -800px -50px;
       }
       &.transmit {
-        background-position: 0 -950px;
+        background-position: -850px -50px;
       }
       &:hover {
-        background-position: 0 0;
+        background-position-y: 0;
       }
     }
   }
