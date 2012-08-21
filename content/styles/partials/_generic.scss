@@ -2,23 +2,19 @@
   margin: 0;
   padding: 0;
 }
-
 *:active, *:focus {
   outline: 0;
 }
-
 ::-moz-selection {
   background: #fcd700;
   color: #fff;
   text-shadow: none;
 }
-
 ::selection {
   background: #fcd700;
   color: #fff;
   text-shadow: none;
 }
-
 body {
   color: $dark_blue;
   margin: 0;
@@ -34,7 +30,6 @@ body {
     size: 16px;
   }
   line-height: 18px;
-
   &#contact #container header nav ul li.contact a,
   &#photos #container header nav ul li.photos a,
   &#blog #container header nav ul li.blog a,
@@ -55,15 +50,10 @@ body {
     -khtml-border-radius: 5px;
   }
 }
-
 a {
   text-decoration: none;
-}
-
-a {
   @include link-colors($orange, $orange, $orange, $orange);
 }
-
 h1, h2, h3, h4 {
   font: {
     family: 'BanksiaRegular', Helvetica, Arial, sans-serif;
@@ -72,45 +62,37 @@ h1, h2, h3, h4 {
   }
   margin: 10px 0;
 }
-
 h1 {
   font-size: 35px;
   line-height: 35px;
   margin: 10px 0 25px 0;
 }
-
 h2 {
   font-size: 24px;
   margin: 5px 0;
 }
-
 h3 {
   font-size: 20px;
   color: $orange;
+  &.second {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed $grey;
+  }
 }
-
-h3.second {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px dashed $grey;
-}
-
 .clear {
   clear: both;
 }
-
 #container {
   width: 1000px;
   margin: 0 auto;
   padding: 0;
   background-color: transparent;
-
   header {
     margin: 150px 0 0 0;
     text-align: center;
     position: relative;
     height: 173px;
-
     #logo {
       display: block;
       font: {
@@ -141,11 +123,9 @@ h3.second {
       position: absolute;
       bottom: 0;
       width: 100%;
-
       ul {
         margin: 0;
         padding: 0;
-
         li {
           display: -moz-inline-stack;
           display: inline-block;
@@ -154,7 +134,6 @@ h3.second {
           margin: 0;
           *display: inline;
           text-align: center;
-
           a {
             display: block;
             padding: 15px 0;
@@ -165,18 +144,15 @@ h3.second {
       }
     }
   }
-
   footer {
     margin: 10px 0 20px 0;
     padding: 10px 0;
     border-top: 1px dashed $grey;
-
     #copyright {
       text-align: right;
       width: 300px;
       float: right;
     }
-
     .icon {
       display:inline-block;
       zoom:1;
@@ -195,17 +171,14 @@ h3.second {
       }
     }
   }
-
   #content {
     padding: 20px 0;
     min-height: 670px;
     height: auto !important;
     height: 670px;
-
     a:hover {
       text-decoration: underline;
     }
-
     .three {
       width: 447px;
       float: left;
@@ -213,11 +186,9 @@ h3.second {
       &.first, &.last {
         width: 240px;
       }
-
       &.first {
         margin-left: 0;
       }
-
       &.last {
         margin-right: 0;
         float: right;

@@ -2,7 +2,6 @@ body#index {
   h1 {
     text-align: center;
   }
-
   ul.tools {
     li {
       overflow: hidden;
@@ -76,14 +75,12 @@ body#index {
       }
     }
   }
-
   #watching, #listening, #reading {
     img {
       padding-right: 10px;
       width: 100px;
     }
   }
-
   #projects {
     img {
       vertical-align: middle;
