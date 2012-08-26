@@ -29,7 +29,7 @@ $ ->
     next_page = "index"  if next_page is ""
     changePage next_page
 
-  $("nav a, a#logo").click (e) ->
+  $("nav a, a.logo").click (e) ->
     e.preventDefault()
     change_url = $(this).data("url")
     new_title = "Web Developer, World Traveler"

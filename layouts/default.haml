@@ -38,12 +38,12 @@
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
-  %body{:id => @item[:url]}
-    #container
+  %body{:class => @item[:url]}
+    .container
       %header
 
         / Text logo for SEO cred
-        %a#logo{:href => "/", :data => {:url => "index"}}
+        %a.logo{:href => "/", :data => {:url => "index"}}
           William Youmans<br>
           %span
             web developer &ndash; world traveler
@@ -77,8 +77,8 @@
 
       / Delicious Footer
       %footer
-        #copyright &copy;#{getCurrentYear} William Youmans
-        #social
+        .copyright &copy;#{getCurrentYear} William Youmans
+        .social
           %a{:href => "http://www.facebook.com/wyoumans", :target => "_blank", :class => "icon facebook", :title => "Facebook"}
           %a{:href => "http://www.last.fm/user/gotwilly/", :target => "_blank", :class => "icon lastfm", :title => "LastFM"}
           %a{:href => "http://www.github.com/klanoma", :target => "_blank", :class => "icon github", :title => "Github"}

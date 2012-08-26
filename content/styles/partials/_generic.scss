@@ -30,12 +30,12 @@ body {
     size: 16px;
   }
   line-height: 18px;
-  &#contact #container header nav ul li.contact a,
-  &#photos #container header nav ul li.photos a,
-  &#blog #container header nav ul li.blog a,
-  &#portfolio #container header nav ul li.portfolio a,
-  &#index #container header nav ul li.index a,
-  & #container header nav ul li a:hover {
+  &.contact .container header nav ul li.contact a,
+  &.photos .container header nav ul li.photos a,
+  &.blog .container header nav ul li.blog a,
+  &.portfolio .container header nav ul li.portfolio a,
+  &.index .container header nav ul li.index a,
+  & .container header nav ul li a:hover {
     color: $dark_blue;
     background: {
       image: linear-gradient(bottom, $grey 2%, $transparent 100%);
@@ -83,7 +83,7 @@ h3 {
 .clear {
   clear: both;
 }
-#container {
+.container {
   width: 1000px;
   margin: 0 auto;
   padding: 0;
@@ -93,7 +93,7 @@ h3 {
     text-align: center;
     position: relative;
     height: 173px;
-    #logo {
+    .logo {
       display: block;
       font: {
         size: 50px;
@@ -148,7 +148,7 @@ h3 {
     margin: 10px 0 20px 0;
     padding: 10px 0;
     border-top: 1px dashed $grey;
-    #copyright {
+    .copyright {
       text-align: right;
       width: 300px;
       float: right;
