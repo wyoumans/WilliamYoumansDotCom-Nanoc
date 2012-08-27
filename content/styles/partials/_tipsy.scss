@@ -7,7 +7,7 @@
   pointer-events:none;
 }
 .tipsy-inner {
-  background-color: #000;
+  background-color: $black;
   color: #FFF;
   max-width: 200px;
   padding: 5px 8px 4px 8px;
@@ -23,19 +23,19 @@
   width: 0;
   height: 0;
   line-height: 0;
-  border: 5px dashed #000;
+  border: 5px dashed $black;
 }
 .tipsy-arrow-n {
-  border-bottom-color: #000;
+  border-bottom-color: $black;
 }
 .tipsy-arrow-s {
-  border-top-color: #000;
+  border-top-color: $black;
 }
 .tipsy-arrow-e {
-  border-left-color: #000;
+  border-left-color: $black;
 }
 .tipsy-arrow-w {
-  border-right-color: #000;
+  border-right-color: $black;
 }
 .tipsy-n .tipsy-arrow {
   top: 0px;

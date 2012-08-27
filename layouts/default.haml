@@ -16,7 +16,7 @@
     %link{:rel => "shortcut icon", :href => "/images/favicon.ico"}
 
     / Stylesheets
-    %link{:rel => "stylesheet", :type =>"text/css", :href => "/styles/screen.css#{getTimestampQueryString}", :media =>"screen"}
+    %link{:rel => "stylesheet", :type =>"text/css", :href => "/styles/screen.css#{getTimestampQueryString}", :media =>"all"}
 
     / Scripts
     %script{:src => "/scripts/jquery.js", :type => "text/javascript", :charset => "utf-8"}
@@ -39,47 +39,45 @@
         })();
 
   %body{:class => @item[:url]}
-    .container
-      %header
+    %header.container_24
 
-        / Text logo for SEO cred
-        %a.logo{:href => "/", :data => {:url => "index"}}
-          William Youmans<br>
-          %span
-            web developer &ndash; world traveler
+      / Text logo for SEO cred
+      %a.logo{:href => "/", :data => {:url => "index"}}
+        William Youmans<br>
+        %span
+          web developer &ndash; world traveler
 
-        / Can I get some navigation up in here?
-        %nav#navigation
-          %ul
-            %li.index
-              %a{:href => "/", :data => {:url => "index"}}
-                Home
-            %li.photos
-              %a{:href => "/photos/", :data => {:url => "photos"}}
-                Photos
-            %li.portfolio
-              %a{:href => "/portfolio/", :data => {:url => "portfolio"}}
-                Portfolio
-            %li.blog
-              %a{:href => "/blog/", :data => {:url => "blog"}}
-                Blog
-            %li.contact
-              %a{:href => "/contact/", :data => {:url => "contact"}}
-                Contact
+      / Can I get some navigation up in here?
+      %nav#navigation
+        %ul
+          %li.index
+            %a{:href => "/", :data => {:url => "index"}}
+              Home
+          %li.photos
+            %a{:href => "/photos/", :data => {:url => "photos"}}
+              Photos
+          %li.portfolio
+            %a{:href => "/portfolio/", :data => {:url => "portfolio"}}
+              Portfolio
+          %li.blog
+            %a{:href => "/blog/", :data => {:url => "blog"}}
+              Blog
+          %li.contact
+            %a{:href => "/contact/", :data => {:url => "contact"}}
+              Contact
 
-      / Main Content
-      #content
+    / Main Content
+    #content.container_24
 
-        / To be updated via Ajax on history.pushState()
-        #content_ajax
-          = yield
-        .clear
+      / To be updated via Ajax on history.pushState()
+      #content_ajax
+        = yield
+      .clear
 
-      / Delicious Footer
-      %footer
-        .copyright &copy;#{getCurrentYear} William Youmans
-        .social
-          %a{:href => "http://www.facebook.com/wyoumans", :target => "_blank", :class => "icon facebook", :title => "Facebook"}
-          %a{:href => "http://www.last.fm/user/gotwilly/", :target => "_blank", :class => "icon lastfm", :title => "LastFM"}
-          %a{:href => "http://www.github.com/klanoma", :target => "_blank", :class => "icon github", :title => "Github"}
-        .clear
+    / Delicious Footer
+    %footer.container_24
+      %a.grid_1{:href => "http://www.facebook.com/wyoumans", :target => "_blank", :class => "icon facebook", :title => "Facebook"}
+      %a.grid_1{:href => "http://www.last.fm/user/gotwilly/", :target => "_blank", :class => "icon lastfm", :title => "LastFM"}
+      %a.grid_1{:href => "http://www.github.com/klanoma", :target => "_blank", :class => "icon github", :title => "Github"}
+      .copyright.grid_6.prefix_15 &copy;#{getCurrentYear} William Youmans
+      .clear

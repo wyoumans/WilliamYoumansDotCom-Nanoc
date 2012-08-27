@@ -30,12 +30,12 @@ body {
     size: 16px;
   }
   line-height: 18px;
-  &.contact .container header nav ul li.contact a,
-  &.photos .container header nav ul li.photos a,
-  &.blog .container header nav ul li.blog a,
-  &.portfolio .container header nav ul li.portfolio a,
-  &.index .container header nav ul li.index a,
-  & .container header nav ul li a:hover {
+  &.contact header nav ul li.contact a,
+  &.photos header nav ul li.photos a,
+  &.blog header nav ul li.blog a,
+  &.portfolio header nav ul li.portfolio a,
+  &.index header nav ul li.index a,
+  & header nav ul li a:hover {
     color: $dark_blue;
     background: {
       image: linear-gradient(bottom, $grey 2%, $transparent 100%);
@@ -76,123 +76,98 @@ h3 {
   color: $orange;
   &.second {
     margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px dashed $grey;
   }
 }
 .clear {
   clear: both;
 }
-.container {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-  background-color: transparent;
-  header {
-    margin: 150px 0 0 0;
-    text-align: center;
-    position: relative;
-    height: 173px;
-    .logo {
-      display: block;
-      font: {
-        size: 50px;
-        family: 'BanksiaRegular', Helvetica, Arial, sans-serif;
-        weight: normal;
-      }
-      line-height: 25px;
-      color: $white;
-      width: 410px;
-      margin: 0 auto;
-      padding: 15px 0 0 40px;
-      background: {
-        image: url(/images/template/tea.png);
-        repeat: no-repeat;
-        position: 0 5px;
-      }
-      text-align: center;
-
-      span {
-        color: $orange;
-        font-size: 20px;
-        line-height: 20px;
-      }
+header {
+  margin: 150px 0 0 0;
+  text-align: center;
+  position: relative;
+  height: 173px;
+  .logo {
+    display: block;
+    font: {
+      size: 50px;
+      family: 'BanksiaRegular', Helvetica, Arial, sans-serif;
+      weight: normal;
     }
-    nav {
-      text-align: center;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      ul {
-        margin: 0;
+    line-height: 25px;
+    color: $white;
+    width: 410px;
+    margin: 0 auto;
+    padding: 15px 0 0 40px;
+    background: {
+      image: url(/images/template/tea.png);
+      repeat: no-repeat;
+      position: 0 5px;
+    }
+    text-align: center;
+
+    span {
+      color: $orange;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  nav {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: -moz-inline-stack;
+        display: inline-block;
+        zoom: 1;
         padding: 0;
-        li {
-          display: -moz-inline-stack;
-          display: inline-block;
-          zoom: 1;
-          padding: 0;
-          margin: 0;
-          *display: inline;
-          text-align: center;
-          a {
-            display: block;
-            padding: 15px 0;
-            width: 100px;
-            color: $dark_blue;
-          }
+        margin: 0;
+        *display: inline;
+        text-align: center;
+        a {
+          display: block;
+          padding: 15px 0;
+          width: 100px;
+          color: $dark_blue;
         }
       }
     }
   }
-  footer {
-    margin: 10px 0 20px 0;
-    padding: 10px 0;
-    border-top: 1px dashed $grey;
-    .copyright {
-      text-align: right;
-      width: 300px;
-      float: right;
+}
+footer {
+  margin: 10px 0 20px 0;
+  padding: 10px 0;
+  border-top: 1px dashed $grey;
+  .copyright {
+    text-align: right;
+  }
+  .icon {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    height: 25px;
+    width: 25px;
+    background: transparent url(/images/icons/facebook.png) no-repeat 0 -25px;
+    &.lastfm {
+      background-image: url(/images/icons/lastfm.png);
     }
-    .icon {
-      display:inline-block;
-      zoom:1;
-      *display:inline;
-      height: 25px;
-      width: 25px;
-      background: transparent url(/images/icons/facebook.png) no-repeat 0 -25px;
-      &.lastfm {
-        background-image: url(/images/icons/lastfm.png);
-      }
-      &.github {
-        background-image: url(/images/icons/github.png);
-      }
-      &:hover {
-        background-position: 0 0;
-      }
+    &.github {
+      background-image: url(/images/icons/github.png);
+    }
+    &:hover {
+      background-position: 0 0;
     }
   }
-  #content {
-    padding: 20px 0;
-    min-height: 670px;
-    height: auto !important;
-    height: 670px;
-    a:hover {
-      text-decoration: underline;
-    }
-    .three {
-      width: 447px;
-      float: left;
-      margin: 0 17px;
-      &.first, &.last {
-        width: 240px;
-      }
-      &.first {
-        margin-left: 0;
-      }
-      &.last {
-        margin-right: 0;
-        float: right;
-      }
-    }
+}
+#content {
+  padding: 20px 0;
+  min-height: 670px;
+  height: auto !important;
+  height: 670px;
+  a:hover {
+    text-decoration: underline;
   }
 }
