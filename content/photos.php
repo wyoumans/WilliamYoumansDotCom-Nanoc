@@ -17,9 +17,10 @@ $count = 0;
 
 .post
   %h2
-    %span <?php echo date('m/d/Y', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)) ?>
+    %span
+      <?php echo date('m/d/Y', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)) ?>
 
-  %p <?php echo $node->getElementsByTagName('description')->item(0)->nodeValue ?>
+  <?php echo str_replace('<img ', '<img alt="Picture of the Day" ', $node->getElementsByTagName('description')->item(0)->nodeValue) ?>
 
 <?php if($count++ > 5) break; ?>
 <?php endforeach; ?>

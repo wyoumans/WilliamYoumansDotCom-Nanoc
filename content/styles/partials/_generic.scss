@@ -131,7 +131,7 @@ header {
           display: block;
           padding: 15px 0;
           width: 100px;
-          color: $dark_blue;
+          @include link-colors($dark_blue, $dark_blue, $dark_blue, $dark_blue);
         }
       }
     }
