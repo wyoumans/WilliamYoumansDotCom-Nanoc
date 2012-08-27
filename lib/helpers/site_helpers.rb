@@ -5,7 +5,7 @@ module SiteHelpers
   end
 
   def isProduction
-    true
+    false
   end
 
   def getTimestampQueryString

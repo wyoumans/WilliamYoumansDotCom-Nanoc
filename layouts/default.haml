@@ -1,6 +1,6 @@
 !!! 5
 
-%html{:lang =>"en"}
+%html{:lang =>"en", :itemscope => true, :itemtype => "http://schema.org/Person"}
   %head
     %meta{:charset =>"utf-8"}
     %title William Youmans | #{@item[:browser_title]}
@@ -39,13 +39,14 @@
         })();
 
   %body{:class => @item[:url]}
+
     %header.container_24
 
       / Text logo for SEO cred
       %a.logo{:href => "/", :data => {:url => "index"}}
-        William Youmans<br>
-        %span
-          web developer &ndash; world traveler
+        %span{:itemprop => "name"} William Youmans<br>
+        %span.subheading web developer &ndash; world traveler
+        %img{:src => "/images/template/william.jpg", :itemprop => "image", :class => "hidden"}
 
       / Can I get some navigation up in here?
       %nav#navigation

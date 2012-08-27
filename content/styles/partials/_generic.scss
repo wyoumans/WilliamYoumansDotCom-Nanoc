@@ -81,6 +81,9 @@ h3 {
 .clear {
   clear: both;
 }
+.hidden {
+  display:none;
+}
 header {
   margin: 150px 0 0 0;
   text-align: center;
@@ -105,7 +108,7 @@ header {
     }
     text-align: center;
 
-    span {
+    span.subheading {
       color: $orange;
       font-size: 20px;
       line-height: 20px;
