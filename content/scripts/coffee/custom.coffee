@@ -8,7 +8,7 @@ changePage = (new_url) ->
     extension = ".html"
     extension = ".php"  if new_url is "photos"
     $.get "/ajax/" + new_url + extension, (data) ->
-      $("body").attr "id", new_url
+      $("body").attr "class", new_url
       $("#content_ajax").html(data).toggle animation_effect, animation_speed, ->
         initiateToolTips()
 
